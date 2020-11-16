@@ -23,7 +23,8 @@ export default function DenseAppBar() {
         <Toolbar variant="dense">
       
           <Typography variant="h6" color="inherit">
-            Homie
+       
+Homie
           </Typography>
         </Toolbar>
       </AppBar>
