@@ -24,7 +24,7 @@ export default function DenseAppBar() {
       
           <Typography variant="h6" color="inherit">
        
-Homie
+Homerun
           </Typography>
         </Toolbar>
       </AppBar>

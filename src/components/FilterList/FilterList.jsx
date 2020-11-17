@@ -5,10 +5,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import CreateIcon from '@material-ui/icons/Create';
 
 const FilterList = (props) => {
   
+    let deleteMe = (currentIndex) => {
+        props.handleDelete(currentIndex);
+    }
+
     return (
         <List>
 
@@ -27,25 +30,17 @@ const FilterList = (props) => {
                         let tmp = "";
                         if (data.rooms) tmp = data.rooms + " rum";
                         if (data.squareMeters) tmp = tmp + ", " + data.squareMeters + " m^2";
-                        if (data.price) tmp = tmp + data.price + " kr";
-                        if (data.squareMeterPrice) tmp = tmp + data.squareMeterPrice + " kr / m^2";
-                        if (data.fee) tmp = tmp + data.fee + " kr / mån";
+                        if (data.price) tmp = tmp + ", " + data.price + " kr";
+                        if (data.fee) tmp = tmp + ", " + data.fee + " kr / mån";
                         return tmp;
                     }
-
-
                     
                     return (
                         <ListItem key={i}>
-                            <div style={{marginRight: 8, borderRadius: 100, width: 44, height: 44, backgroundColor: getColor(i)}} />
+                            <div style={{marginRight: 8, borderRadius: 100, width: 32, height: 32, backgroundColor: getColor(i)}} />
                             <ListItemText primary={data.area} secondary={generateString()} />
-                            <ListItemSecondaryAction style={{paddingRight:60}}>
-                                <IconButton edge="end" aria-label="delete" onClick={() => this.fEdit(i)}>
-                                    <CreateIcon />
-                                </IconButton>
-                            </ListItemSecondaryAction>
                             <ListItemSecondaryAction>
-                                <IconButton edge="end" aria-label="delete" onClick={() => this.fRemove(i)} >
+                                <IconButton edge="end" aria-label="delete" onClick={() => deleteMe(i)} >
                                     <DeleteIcon />
                                 </IconButton>
                             </ListItemSecondaryAction>

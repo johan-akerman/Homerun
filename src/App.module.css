@@ -1,14 +1,18 @@
 body {
     background-color: #fff;
     margin: 0;
+    overflow-y: hidden;
   
 }
 
 .sideBar {
     background-color: white;
-    border-right: 1px solid #ccc;
-}
+    width: 30%;
+padding: 0 8px;
+    height: 94vh;
+    border-right: 0.5px solid #ccc;
 
+}
 
 .grid {
     background-color: #fff; 

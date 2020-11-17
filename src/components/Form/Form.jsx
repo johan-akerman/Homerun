@@ -8,6 +8,7 @@ import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
+import styles from "./Form.module.css"
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -22,16 +23,77 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const Form = (props) => {
+
+//Gammal logik från tidigare form (sparas tillfälligt som inspiration till hur Edit ska kodas)
+//    fSubmit = (e) => {
+//        e.preventDefault();
+//        let datas = this.state.datas;
+//        let firstname = this.refs.firstname.value;
+//        let lastname= this.refs.lastname.value;
+//        let kvadratmeter = this.refs.kvadratmeter.value;
+//        let rum= this.refs.rum.value;
+ 
+
+//        if (this.state.act === 0) { //new
+//         let data = {
+//             firstname, lastname, kvadratmeter, rum
+//         }
+//         datas.push(data);
+
+
+//        } else { //edit
+//         let index = this.state.index;
+//         datas[index].firstname = firstname;
+//         datas[index].lastname = lastname;
+//         datas[index].kvadratmeter = kvadratmeter;
+//         datas[index].rum = rum;
+//        }
+     
+//        this.setState({
+//            datas: datas,
+//            act: 0
+//        });
+
+//        this.refs.myForm.reset();
+//        this.setState({openPopup: false})
+//        console.log(this.state.datas)
+//    }
+
+//    fRemove = (i) => {
+//     let datas = this.state.datas;
+//     datas.splice(i,1);
+//     this.setState({
+//         datas: datas
+//     })
+//    }
+
+//    fEdit = (i) => {
+
+//     this.setState({
+//         act: 1,
+//         index: i,
+//         openPopup: true
+//     })
+
+//     let data = this.state.datas[i];
+//     this.refs.firstname.value = data.firstname;
+//     this.refs.lastname.value = data.lastname;
+//     this.refs.kvadratmeter.value = data.kvadratmeter;
+//     this.refs.rum.value = data.rum;
+//     this.refs.firstname.focus();
+
+//    }
+ 
+
     const classes = useStyles();
     const [area, setArea] = React.useState('');
     const [price, setPrice] = React.useState([20, 37]);
-    const [squareMeterPrice, setSquareMeterPrice] = React.useState([20, 37]);
     const [rooms, setRoom] = React.useState([20, 37]);
     const [squareMeters, setSquareMeters] = React.useState([20, 37]);
     const [fee, setFee] = React.useState([20, 37]);
 
     var data = {
-        area: area, price: price, squareMeterPrice: squareMeterPrice, rooms: rooms, squareMeters: squareMeters, fee: fee
+        area: area, price: price, rooms: rooms, squareMeters: squareMeters, fee: fee
     }
 
     const handleAreaChange = (event) => {
@@ -43,13 +105,9 @@ const Form = (props) => {
     const handlePriceChange = (event, newValue) => {
         setPrice(newValue);
     };
-
-    const handleSquareMeterPriceChange = (event, newValue) => {
-        setSquareMeterPrice(newValue);
-    };
-
+ 
     const handleRoomChange = (event, newValue) => {
-        setRoom(newValue);
+      setRoom(newValue);
     };
 
     const handleSquareMetersChange = (event, newValue) => {
@@ -62,17 +120,27 @@ const Form = (props) => {
 
 
     let submitMe = (e) => {
-        e.preventDefault();
+      e.preventDefault();
+
+
+      if (!data.area) {
+        alert("You have to choose an area! ");
+      } else {
         props.handleFormSubmit(data)
+      }
     }
 
     return (<div>
-        <FormControl className={classes.formControl}>
-            <InputLabel id="demo-simple-select-label">Område</InputLabel>
+        <FormControl required className={classes.formControl}>
+        
+            <Typography id="range-slider" gutterBottom>
+        Area
+      </Typography>
                 <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
+        labelId="demo-simple-select-required-label"
+        id="demo-simple-select-required"
                 value={area}
+                required
                 onChange={handleAreaChange}
                 >
                 <MenuItem value={"Östermalm"}>Östermalm</MenuItem>
@@ -84,8 +152,27 @@ const Form = (props) => {
 <br />
 <br />
         <div className={classes.root}>
+
+
+           
+<Typography id="range-slider" gutterBottom>
+        Number of rooms
+      </Typography>
+    
+      <Slider
+        value={rooms}
+       
+        step={0.5}
+        min={1}
+        max={15}
+        onChange={handleRoomChange}
+        valueLabelDisplay="auto"
+        aria-labelledby="range-slider"
+  
+      />
+
       <Typography id="range-slider" gutterBottom>
-        Pris
+        Price (million SEK)
       </Typography>
     
       <Slider
@@ -93,35 +180,13 @@ const Form = (props) => {
         onChange={handlePriceChange}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
-  
+        step={0.25}
+        min={0.5}
+        max={13.5}
       />
-
+ 
 <Typography id="range-slider" gutterBottom>
-        Kvadratmeterpris
-      </Typography>
-    
-      <Slider
-        value={squareMeterPrice}
-        onChange={handleSquareMeterPriceChange}
-        valueLabelDisplay="auto"
-        aria-labelledby="range-slider"
-  
-      />
-
-<Typography id="range-slider" gutterBottom>
-        Rum
-      </Typography>
-    
-      <Slider
-        value={rooms}
-        onChange={handleRoomChange}
-        valueLabelDisplay="auto"
-        aria-labelledby="range-slider"
-  
-      />
-
-<Typography id="range-slider" gutterBottom>
-        Boarea
+        Livingarea (squaremeters)
       </Typography>
     
       <Slider
@@ -129,19 +194,24 @@ const Form = (props) => {
         onChange={handleSquareMetersChange}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
+        step={5}
+        min={20}
+        max={150}
   
       />
 
-<Typography id="range-slider" gutterBottom>
-        Högst avgift
+<Typography id="discrete-slider" gutterBottom>
+        Highest fee (thousand SEK)
       </Typography>
-    
       <Slider
-        value={fee}
-        onChange={handleFeeChange}
+        defaultValue={30}
+       
+        aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
-        aria-labelledby="range-slider"
-  
+        step={0.5}
+        onChange={handleFeeChange}
+        min={0}
+        max={25}
       />
     </div>
 
@@ -154,10 +224,10 @@ const Form = (props) => {
         color="primary"
         size="large"
         onClick={submitMe}
-        className={classes.button}
+        className={styles.myBtn}
         startIcon={<AddIcon />}
       >
-        Add to seach
+        Add to search
       </Button>
        </div>
     );
