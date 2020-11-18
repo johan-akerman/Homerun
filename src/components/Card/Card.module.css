@@ -1,0 +1,15 @@
+.gridContainer {
+
+    height: 275px;
+    padding: 8px;
+    background-color: white;
+}
+
+.gridContent {
+    height: 230px;
+    overflow: auto;
+}
+
+.gridHeader {
+    margin-bottom: 16px;
+}

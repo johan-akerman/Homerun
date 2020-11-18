@@ -1,19 +1,42 @@
+
+html {
+	height: 100%;
+}
+
 body {
+    height: 100%;
     background-color: #fff;
-    margin: 0;
-    overflow-y: hidden;
-  
+    margin: 0; 
+}
+
+.container {
+
+    height: 92vh;
 }
 
 .sideBar {
     background-color: white;
-    width: 30%;
-padding: 0 8px;
-    height: 94vh;
-    border-right: 0.5px solid #ccc;
+    width: 25vw;
+    display: inline-block;
+    height: 100%;
+    overflow: auto;
+}
+
+.sideBarContent {
+    padding: 55px 8px;
+}
+
+.mainContainer {
+   width: 75vw !important;
+   display: inline-block;
+   background-color: #F7F8F9 !important;
+   overflow: auto;
+   vertical-align: top;
+height: 100%;
+
 
 }
 
-.grid {
-    background-color: #fff; 
+.mainContainerContent {
+    padding: 16px
 }

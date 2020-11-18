@@ -137,10 +137,9 @@ const Form = (props) => {
         Area
       </Typography>
                 <Select
-        labelId="demo-simple-select-required-label"
-        id="demo-simple-select-required"
+                  labelId="demo-simple-select-required-label"
+                  id="demo-simple-select-required"
                 value={area}
-                required
                 onChange={handleAreaChange}
                 >
                 <MenuItem value={"Östermalm"}>Östermalm</MenuItem>
@@ -151,7 +150,7 @@ const Form = (props) => {
 
 <br />
 <br />
-        <div className={classes.root}>
+<div className={classes.root}>
 
 
            
@@ -160,15 +159,13 @@ const Form = (props) => {
       </Typography>
     
       <Slider
-        value={rooms}
-       
+        defaultValue={[1, 2]}
         step={0.5}
         min={1}
         max={15}
         onChange={handleRoomChange}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
-  
       />
 
       <Typography id="range-slider" gutterBottom>
@@ -176,10 +173,11 @@ const Form = (props) => {
       </Typography>
     
       <Slider
-        value={price}
+        defaultValue={[0, 2]}
         onChange={handlePriceChange}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
+        
         step={0.25}
         min={0.5}
         max={13.5}
@@ -190,7 +188,7 @@ const Form = (props) => {
       </Typography>
     
       <Slider
-        value={squareMeters}
+        defaultValue={[20, 50]}
         onChange={handleSquareMetersChange}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
@@ -204,8 +202,7 @@ const Form = (props) => {
         Highest fee (thousand SEK)
       </Typography>
       <Slider
-        defaultValue={30}
-       
+        defaultValue={6}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
         step={0.5}

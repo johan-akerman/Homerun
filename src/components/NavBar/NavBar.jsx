@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import styles from "./NavBar.module.css";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +22,7 @@ export default function DenseAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
    
-        <Toolbar variant="dense">
+        <Toolbar className={styles.navbar}>
       
           <Typography variant="h6" color="inherit">
        
