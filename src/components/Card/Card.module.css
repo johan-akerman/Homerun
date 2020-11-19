@@ -1,8 +1,18 @@
 .gridContainer {
 
     height: 275px;
-    padding: 8px;
+    padding: 4px 16px 16px 16px;
     background-color: white;
+}
+
+.title {
+    display: inline-block;
+    padding-top: 12px;
+}
+
+.expandMeBtn {
+    display: inline-block;
+    float: right;
 }
 
 .gridContent {
@@ -12,4 +22,20 @@
 
 .gridHeader {
     margin-bottom: 16px;
+}
+
+.modal {
+    margin: 32px;
+    height: 90%;
+    background-color: white;
+    border-radius: 4px;
+    border-color: transparent;
+    overflow: auto;
+    padding: 0px 16px 16px 16px;
+    outline: none !important;
+}
+
+.modalHeader {
+    padding-top: 0;
+    padding-bottom: 16px;
 }

@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Table from "./components/Table/Table"
 
 class App extends React.Component {
-
+    
     constructor(props) {
         super(props);
         
@@ -82,7 +82,7 @@ class App extends React.Component {
 
                     <Grid item xs={4}>
                         <Card title="Something goes here"> 
-                   
+                   <h1>hej</h1>
                         </Card>
                     </Grid>
 
