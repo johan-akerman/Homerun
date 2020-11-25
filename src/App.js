@@ -10,6 +10,9 @@ import Grid from '@material-ui/core/Grid';
 import Form from "./components/Form/Form";
 import Typography from '@material-ui/core/Typography';
 import Table from "./components/Table/Table"
+import TestChart from "./components/TestChart/TestChart"
+import DoughnutChart from "./components/DoughnutChart/DoughnutChart"
+
 
 class App extends React.Component {
     
@@ -60,11 +63,8 @@ class App extends React.Component {
             <NavBar />
             <div className={styles.container}>
 
-      
             <div className={styles.sideBar}>
                 <div className={styles.sideBarContent}>
-
-        
                 {this.noAddedFiltersYet()}
                 <Button variant="outlined" size="medium" color="primary" startIcon={<AddIcon />} onClick={this.handleAdd}>Add new area</Button>
                 </div>
@@ -74,6 +74,13 @@ class App extends React.Component {
                 <div className={styles.mainContainerContent}>
 
                 <Grid container spacing={1}>
+                    
+                <Grid item xs={8}>
+                        <Card title="Squaremeter price development"> 
+                            <TestChart />
+                        </Card>
+                    </Grid>
+                    
                     <Grid item xs={8}>
                         <Card title="Summary"> 
                             <Table />
@@ -81,30 +88,26 @@ class App extends React.Component {
                     </Grid>
 
                     <Grid item xs={4}>
-                        <Card title="Something goes here"> 
-                   <h1>hej</h1>
+                     
+                        <Card title="Total sales"> 
+                            <DoughnutChart />
                         </Card>
                     </Grid>
 
-                    <Grid item xs={6}>
-                        <Card title="Price development / squaremeter"> 
-                            
+                    <Grid item xs={8}>
+                        <Card title="Number of sales per month"> 
+                        <TestChart />
+
+                        </Card>
+                    </Grid>
+    
+                    <Grid item xs={4}>
+                    <Card title="Någonting"> 
+                            <DoughnutChart />
                         </Card>
                     </Grid>
 
-                    <Grid item xs={6}>
-                        <Card title="Number of sales"> 
-                        </Card>
-                    </Grid>
-      
-            
-
-      
-                    <Grid item xs={12}>
-                        <Card title="Data origin map"> 
-                   
-                        </Card>
-                    </Grid>
+                    
         </Grid>
                 
                 </div>

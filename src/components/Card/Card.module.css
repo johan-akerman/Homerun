@@ -1,6 +1,5 @@
 .gridContainer {
-
-    height: 275px;
+    position: relative;
     padding: 4px 16px 16px 16px;
     background-color: white;
 }
@@ -16,7 +15,8 @@
 }
 
 .gridContent {
-    height: 230px;
+    height: 325px;
+    width: 100%;
     overflow: auto;
 }
 
