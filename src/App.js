@@ -10,9 +10,10 @@ import Grid from '@material-ui/core/Grid';
 import Form from "./components/Form/Form";
 import Typography from '@material-ui/core/Typography';
 import Table from "./components/Table/Table"
-import TestChart from "./components/TestChart/TestChart"
-import DoughnutChart from "./components/DoughnutChart/DoughnutChart"
+import LineChart from "./components/LineChart/LineChart"
 
+import DoughnutChart from "./components/DoughnutChart/DoughnutChart"
+import BarChart from "./components/BarChart/BarChart"
 
 class App extends React.Component {
     
@@ -23,8 +24,28 @@ class App extends React.Component {
             openPopup: false,
             setOpenPopup: false,
             datas: [
-            ]
+            ],
+            apartments: [
+
+            ],
         }
+    }
+
+    componentDidMount() {
+        fetch('apartments.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        return response.json();
+      }).then(myJson => {
+          this.setState({apartments: myJson})
+          //console.log(this.state.apartments);
+      });
     }
 
     noAddedFiltersYet = () => {
@@ -77,7 +98,13 @@ class App extends React.Component {
                     
                 <Grid item xs={8}>
                         <Card title="Squaremeter price development"> 
-                            <TestChart />
+                            <LineChart data={this.state.apartments}/>
+                        </Card>
+                    </Grid>
+
+                    <Grid item xs={4}>
+                    <Card title="Bar Chart with average prisutveckling"> 
+                            <BarChart />
                         </Card>
                     </Grid>
                     
@@ -95,15 +122,20 @@ class App extends React.Component {
                     </Grid>
 
                     <Grid item xs={8}>
-                        <Card title="Number of sales per month"> 
-                        <TestChart />
-
+                        <Card title="Number of sales"> 
+                   <h1>hej</h1>
                         </Card>
                     </Grid>
     
                     <Grid item xs={4}>
                     <Card title="Någonting"> 
-                            <DoughnutChart />
+                          
+                        </Card>
+                    </Grid>
+
+                    <Grid item xs={4}>
+                    <Card title="Bar Chart med average fee (last year)"> 
+                            <BarChart />
                         </Card>
                     </Grid>
 
