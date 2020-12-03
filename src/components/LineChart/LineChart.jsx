@@ -1,19 +1,22 @@
 import React, {useState, useEffect} from "react";
-import {fetchData} from "../../api";
+import {fetchSquareMeterPriceDevelopmentData} from "../../api";
+import {fetchPriceDevelopmentData} from "../../api";
 import {Line} from "react-chartjs-2";
 
-const LineChart = ({data: {date, askPrice, endPrice}}) => {
-    const [dailyData, setDailyData] = useState([]);
+const LineChart = () => {
+    const [dailyData, setDailyData,] = useState([]);
+    const [priceDevelopment, setPriceDevelopment,] = useState([]);
 
     useEffect(() => {
          const fetchAPI = async () => {
-            setDailyData(await fetchData());
+           setPriceDevelopment(await fetchPriceDevelopmentData());
+           setDailyData(await fetchSquareMeterPriceDevelopmentData());
          }
          fetchAPI();
     }, []);
 
-    const lineChart = (
-        dailyData.length ? //if the array is 
+    const squareMeterDevelopmentChart = (
+        dailyData.length ? //if the array exists 
         (<Line 
             data={{
                 labels: dailyData.map(({date}) => date), 
@@ -32,10 +35,30 @@ const LineChart = ({data: {date, askPrice, endPrice}}) => {
             }}
         />) : null);
 
+
+        const priceDevelopmentChart = (
+            priceDevelopment.length ? //if the array is 
+            (<Line 
+                data={{
+                    labels: priceDevelopment.map(({date}) => date), 
+                    datasets: [{
+                        data: priceDevelopment.map(({askPrice}) => askPrice),
+                        label: "Ask Price",
+                        borderColor: "#3333ff",
+                        fill: false,
+                    }, {
+                        data: priceDevelopment.map(({endPrice}) => endPrice),
+                        label: "End Price",
+                        borderColor: "red",
+                        backgroundColor: "rgba(255,0,0,0.5",
+                        fill: false,
+                    }],
+                }}
+            />) : null);
+
     return (
        <div>
-           {console.log(dailyData)}
-           {lineChart}
+           {priceDevelopmentChart ? priceDevelopmentChart : squareMeterDevelopmentChart }
        </div>
     )
 }

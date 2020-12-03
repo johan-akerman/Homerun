@@ -11,6 +11,7 @@ import Form from "./components/Form/Form";
 import Typography from '@material-ui/core/Typography';
 import Table from "./components/Table/Table"
 import LineChart from "./components/LineChart/LineChart"
+import Map from "./components/Map/Map"
 
 import DoughnutChart from "./components/DoughnutChart/DoughnutChart"
 import BarChart from "./components/BarChart/BarChart"
@@ -96,6 +97,12 @@ class App extends React.Component {
 
                 <Grid container spacing={1}>
                     
+                <Grid item xs={12}>
+                    <Card title="Map with datasets"> 
+                          <Map />
+                    </Card>
+                </Grid>
+
                 <Grid item xs={8}>
                         <Card title="Squaremeter price development"> 
                             <LineChart data={this.state.apartments}/>
@@ -107,7 +114,9 @@ class App extends React.Component {
                             <BarChart />
                         </Card>
                     </Grid>
-                    
+
+                
+            
                     <Grid item xs={8}>
                         <Card title="Summary"> 
                             <Table />
@@ -121,17 +130,15 @@ class App extends React.Component {
                         </Card>
                     </Grid>
 
+                    
+
                     <Grid item xs={8}>
                         <Card title="Number of sales"> 
-                   <h1>hej</h1>
+                        <h1>test</h1>
                         </Card>
                     </Grid>
     
-                    <Grid item xs={4}>
-                    <Card title="Någonting"> 
-                          
-                        </Card>
-                    </Grid>
+                   
 
                     <Grid item xs={4}>
                     <Card title="Bar Chart med average fee (last year)"> 
