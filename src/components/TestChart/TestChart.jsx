@@ -29,7 +29,7 @@ class TestChart extends React.Component {
 //   console.log(this.state.originalData)
 //   var speedData = {
 //     labels: this.props.data.map(({date}) => date), 
-//     datasets: [{
+//     filtersets: [{
 //       data: this.props.data.map(({askPrice}) => askPrice),
 //       lineTension: 0,
 //       fill: false,

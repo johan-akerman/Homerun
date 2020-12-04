@@ -7,7 +7,7 @@ const BarChart = () => {
 
 
   const data = {
-        datasets: [{
+        filtersets: [{
             barPercentage: 0.5,
             barThickness: 6,
             maxBarThickness: 8,

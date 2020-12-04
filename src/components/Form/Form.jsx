@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select'
@@ -23,68 +22,6 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const Form = (props) => {
-
-//Gammal logik från tidigare form (sparas tillfälligt som inspiration till hur Edit ska kodas)
-//    fSubmit = (e) => {
-//        e.preventDefault();
-//        let datas = this.state.datas;
-//        let firstname = this.refs.firstname.value;
-//        let lastname= this.refs.lastname.value;
-//        let kvadratmeter = this.refs.kvadratmeter.value;
-//        let rum= this.refs.rum.value;
- 
-
-//        if (this.state.act === 0) { //new
-//         let data = {
-//             firstname, lastname, kvadratmeter, rum
-//         }
-//         datas.push(data);
-
-
-//        } else { //edit
-//         let index = this.state.index;
-//         datas[index].firstname = firstname;
-//         datas[index].lastname = lastname;
-//         datas[index].kvadratmeter = kvadratmeter;
-//         datas[index].rum = rum;
-//        }
-     
-//        this.setState({
-//            datas: datas,
-//            act: 0
-//        });
-
-//        this.refs.myForm.reset();
-//        this.setState({openPopup: false})
-//        console.log(this.state.datas)
-//    }
-
-//    fRemove = (i) => {
-//     let datas = this.state.datas;
-//     datas.splice(i,1);
-//     this.setState({
-//         datas: datas
-//     })
-//    }
-
-//    fEdit = (i) => {
-
-//     this.setState({
-//         act: 1,
-//         index: i,
-//         openPopup: true
-//     })
-
-//     let data = this.state.datas[i];
-//     this.refs.firstname.value = data.firstname;
-//     this.refs.lastname.value = data.lastname;
-//     this.refs.kvadratmeter.value = data.kvadratmeter;
-//     this.refs.rum.value = data.rum;
-//     this.refs.firstname.focus();
-
-//    }
- 
-
     const classes = useStyles();
     const [area, setArea] = React.useState('');
     const [price, setPrice] = React.useState([20, 37]);
@@ -99,7 +36,6 @@ const Form = (props) => {
     const handleAreaChange = (event) => {
         setArea(event.target.value);
         data.area = event.target.value;
-        console.log(data)
     };
 
     const handlePriceChange = (event, newValue) => {

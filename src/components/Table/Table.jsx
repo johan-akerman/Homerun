@@ -44,7 +44,6 @@ const summaryTable = (
       </TableRow>
     </TableHead>
     <TableBody>
-      {console.log(dailyData)}
       {dailyData.map((item) => (
         <TableRow key={item.date}>
           <TableCell component="th" scope="row">{item.date}</TableCell>

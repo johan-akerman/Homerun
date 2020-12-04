@@ -16,7 +16,7 @@ const FilterList = (props) => {
         <List>
 
            
-            {props.datas.map((data, i) => {
+            {props.filters.map((data, i) => {
 
                     let getColor = (i) => {
                         if (i === 0) return "#8bc34a" ;

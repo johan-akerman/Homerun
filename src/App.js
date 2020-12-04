@@ -11,61 +11,65 @@ import Form from "./components/Form/Form";
 import Typography from '@material-ui/core/Typography';
 import Table from "./components/Table/Table"
 import LineChart from "./components/LineChart/LineChart"
-import Map from "./components/Map/Map"
-
+// import Map from "./components/Map/Map"
 import DoughnutChart from "./components/DoughnutChart/DoughnutChart"
 import BarChart from "./components/BarChart/BarChart"
+import SquareMeterPriceDevelopment from "./components/Charts/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
+const url = "/apartments.json"
+
 
 class App extends React.Component {
-    
     constructor(props) {
         super(props);
-        
         this.state = {
             openPopup: false,
             setOpenPopup: false,
-            datas: [
-            ],
-            apartments: [
-
-            ],
+            filters: [],
+            allApartments: [],
+            filteredApartments: [],
         }
     }
 
-    componentDidMount() {
-        fetch('apartments.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
+    async componentDidMount() {
+        const response = await fetch(url);
+        const json = await response.json();
+        this.setState({ allApartments: json });
     }
-    )
-      .then(function(response){
-        return response.json();
-      }).then(myJson => {
-          this.setState({apartments: myJson})
-          //console.log(this.state.apartments);
-      });
+
+    generateDataFromFilters = () => {
+        let tmpFilteredApartments = [];
+        this.state.filters.forEach((x) => {
+            let filteredByArea = this.state.allApartments.filter((item) => item.area == x.area);
+            // const filteredByNoOfRooms = filteredByArea.filter((item) => item.rooms[0] >= x.rooms[0] && item.rooms[1] <= x.rooms[1]);
+            // const filteredByPrice = filteredByNoOfRooms.filter((item) => item.price[0] >= x.price[0]);
+            // const filteredByLivingarea = filteredByPrice.filter((item) => item.squareMeters[0] >= x.squareMeters[0] && item.squareMeters[1] <= x.squareMeters[1]);
+            // const filteredByFee = filteredByLivingarea.filter((item) => item.fee[0] >= x.fee[0] && item.fee[1] <= x.fee[1]);
+            tmpFilteredApartments.push(filteredByArea);
+            console.log(tmpFilteredApartments)
+        })
+
+        this.setState({
+            filteredApartments: tmpFilteredApartments,
+        })
+        console.log(this.state.filteredApartments)
     }
 
     noAddedFiltersYet = () => {
-        if (this.state.datas.length < 1) {
-            return (
-            <>
-                <br />
-                <Typography variant="h4" component="h4">Hey, looks like you havent added any areas yet!</Typography>
-                <Typography variant="body1" gutterBottom>Add areas to your search by clicking on the button below. Tip: you can add multiple areas to compare them. </Typography>
-            </>
+        if (this.state.filters.length < 1) {
+            return (<>
+                        <Typography variant="h4" component="h4">Hey, looks like you havent added any areas yet!</Typography>
+                        <Typography variant="body1" gutterBottom>Add areas to your search by clicking on the button below. Tip: you can add multiple areas to compare them. </Typography>
+                    </>
             )
         } else {
-            return <FilterList datas = {this.state.datas} handleDelete = {this.handleDelete} />
+            return <FilterList filters = {this.state.filters} handleDelete = {this.handleDelete} />
         }
     }
 
     handleFormSubmit = (data) => {
-        let datas = this.state.datas;
-        datas.push(data);
+        let filters = this.state.filters;
+        filters.push(data);
+        this.generateDataFromFilters();
         this.setState({openPopup: false})
     }
 
@@ -74,9 +78,9 @@ class App extends React.Component {
     }
 
     handleDelete = (i) => {
-        let datas = this.state.datas;
-        datas.splice(i, 1);
-        this.setState({datas: datas})
+        let filters = this.state.filters;
+        filters.splice(i, 1);
+        this.setState({filters: filters})
     }
 
     render() {
@@ -84,7 +88,6 @@ class App extends React.Component {
         return(<>
             <NavBar />
             <div className={styles.container}>
-
             <div className={styles.sideBar}>
                 <div className={styles.sideBarContent}>
                 {this.noAddedFiltersYet()}
@@ -97,17 +100,24 @@ class App extends React.Component {
 
                 <Grid container spacing={1}>
                     
-                <Grid item xs={12}>
-                    <Card title="Map with datasets"> 
+                {/* <Grid item xs={12}>
+                    <Card title="Map with filtersets"> 
                           <Map />
                     </Card>
-                </Grid>
+                </Grid> */}
+
 
                 <Grid item xs={8}>
                         <Card title="Squaremeter price development"> 
-                            <LineChart data={this.state.apartments}/>
+                            <SquareMeterPriceDevelopment data={this.state.filteredApartments}/>
                         </Card>
                     </Grid>
+
+                {/* <Grid item xs={8}>
+                        <Card title="OLD !!!! Squaremeter price development"> 
+                            <LineChart data={this.state.apartments} filters={this.state.filters}/>
+                        </Card>
+                    </Grid> */}
 
                     <Grid item xs={4}>
                     <Card title="Bar Chart with average prisutveckling"> 
@@ -137,6 +147,12 @@ class App extends React.Component {
                         <h1>test</h1>
                         </Card>
                     </Grid>
+
+                    <Grid item xs={8}>
+                        <Card title="Average prisutveckling / mäklare"> 
+                        <h1>test</h1>
+                        </Card>
+                    </Grid>
     
                    
 
@@ -146,15 +162,15 @@ class App extends React.Component {
                         </Card>
                     </Grid>
 
-                    
+               
         </Grid>
                 
                 </div>
             </div>
             </div>
            
-             <Popup title={"Add area to search yout search"} openPopup={this.state.openPopup} setOpenPopup = {this.state.setOpenPopup}>
-             <Form datas = {this.state.datas} handleFormSubmit = {this.handleFormSubmit}  />
+             <Popup title={"Add area to search"} openPopup={this.state.openPopup} setOpenPopup = {this.state.setOpenPopup}>
+             <Form filters = {this.state.filters} handleFormSubmit = {this.handleFormSubmit}  />
             </Popup>
              </>   
         )

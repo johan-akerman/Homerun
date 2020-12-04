@@ -14,7 +14,7 @@ const DoughnutChart = () => {
 
 
     ],
-    datasets: [{
+    filtersets: [{
       data: [300, 50, 100],
       backgroundColor: [
       '#FF6384',

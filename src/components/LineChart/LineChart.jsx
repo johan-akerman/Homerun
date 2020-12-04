@@ -20,7 +20,7 @@ const LineChart = () => {
         (<Line 
             data={{
                 labels: dailyData.map(({date}) => date), 
-                datasets: [{
+                filtersets: [{
                     data: dailyData.map(({askPrice}) => askPrice),
                     label: "Ask Price",
                     borderColor: "#3333ff",
@@ -41,7 +41,7 @@ const LineChart = () => {
             (<Line 
                 data={{
                     labels: priceDevelopment.map(({date}) => date), 
-                    datasets: [{
+                    filtersets: [{
                         data: priceDevelopment.map(({askPrice}) => askPrice),
                         label: "Ask Price",
                         borderColor: "#3333ff",
