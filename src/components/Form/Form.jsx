@@ -23,11 +23,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Form = (props) => {
   const classes = useStyles();
-  const [area, setArea] = React.useState('');
-  const [price, setPrice] = React.useState([0, 2]);
-  const [rooms, setRoom] = React.useState([1, 2]);
-  const [squareMeters, setSquareMeters] = React.useState([20, 50]);
-  const [fee, setFee] = React.useState(6);
+  const [area, setArea] = React.useState('Östermalm');
+  const [price, setPrice] = React.useState([0, 10]);
+  const [rooms, setRoom] = React.useState([1, 10]);
+  const [squareMeters, setSquareMeters] = React.useState([0, 50]);
+  const [fee, setFee] = React.useState(20);
 
   const handleAreaChange = (event) => {
     setArea(event.target.value);

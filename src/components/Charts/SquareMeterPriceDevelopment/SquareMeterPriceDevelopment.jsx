@@ -1,25 +1,50 @@
 import React, {useState, useEffect} from "react";
+import {Line} from "react-chartjs-2";
 
-class SquareMeterPriceDevelopment extends React.Component {
+
+const SquareMeterPriceDevelopment = props => {
+   const [allFilteredApartments, setAllFilteredApartments] = useState([]);
+
+    useEffect(() => {
+        setAllFilteredApartments(props.data);
+    }, [props.data]);
+
+    console.log(allFilteredApartments)
+
+    const loading = (
+        <h1>loading...</h1>  
+    );
+
     
-constructor(props) {
-    super(props);
-    this.state = {
-        data: this.props.data,
-        filters: this.props.filters,
-        filtersData: []
-    }
-}
+    const notLoading = (
+        (<Line 
+            data={{
+                labels: allFilteredApartments.map(({date}) => date), 
+                filtersets: [{
+                    data: allFilteredApartments.map(({askPrice}) => askPrice),
+                    label: "Ask Price",
+                    borderColor: "#3333ff",
+                    fill: false,
+                }, {
+                    data: allFilteredApartments.map(({pricePerSquare}) => pricePerSquare),
+                    label: "End Price",
+                    borderColor: "red",
+                    backgroundColor: "rgba(255,0,0,0.5",
+                    fill: false,
+                }],
+            }}
+        />
+    ));
 
+    // const notLoading = (
+    //     <ul>
+    //         {allFilteredApartments.map(apartment => {
+    //              return <li>{apartment.size}</li>
+    //         })}
+    //     </ul>
+    // );
 
-render() {
-    return (
-        <div>
-            <h1>squareeee</h1>
-        </div>
-     )
-}
-   
+    return allFilteredApartments.length > 0 ? notLoading : loading
 }
 
 export default SquareMeterPriceDevelopment;

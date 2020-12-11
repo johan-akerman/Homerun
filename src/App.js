@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import styles from './App.module.css';
-import AddIcon from '@material-ui/icons/Add';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import NavBar from './components/NavBar/NavBar';
-import FilterList from './components/FilterList/FilterList';
-import Popup from './components/Popup/Popup';
-import Card from './components/Card/Card';
-import Form from './components/Form/Form';
-import Table from './components/Table/Table';
-import LineChart from './components/LineChart/LineChart';
-// import Map from "./components/Map/Map"
-import DoughnutChart from './components/DoughnutChart/DoughnutChart';
-import BarChart from './components/BarChart/BarChart';
-import SquareMeterPriceDevelopment from './components/Charts/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment';
+import React, { useState, useEffect } from "react";
+import styles from "./App.module.css";
+import AddIcon from "@material-ui/icons/Add";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import NavBar from "./components/NavBar/NavBar";
+import FilterList from "./components/FilterList/FilterList";
+import Popup from "./components/Popup/Popup";
+import Card from "./components/Card/Card";
+import Form from "./components/Form/Form";
+import Table from "./components/Table/Table";
+import Map from "./components/Map/Map";
+import DoughnutChart from "./components/DoughnutChart/DoughnutChart";
+import BarChart from "./components/BarChart/BarChart";
+import SquareMeterPriceDevelopment from "./components/Charts/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
 
-const url = '/apartments.json';
+const url = "/apartments.json";
 const App = () => {
   const [openPopup, setOpenPopup] = useState(false);
   const [filters, setFilters] = useState([]);
@@ -87,7 +86,7 @@ const App = () => {
           </Typography>
           <Typography variant="body1" gutterBottom>
             Add areas to your search by clicking on the button below. Tip: you
-            can add multiple areas to compare them.{' '}
+            can add multiple areas to compare them.{" "}
           </Typography>
         </>
       );
@@ -119,10 +118,10 @@ const App = () => {
           <div className={styles.mainContainerContent}>
             <Grid container spacing={1}>
               {/* <Grid item xs={12}>
-                    <Card title="Map with filtersets"> 
-                          <Map />
-                    </Card>
-                </Grid> */}
+                <Card title="Map with filtersets">
+                  <Map />
+                </Card>
+              </Grid> */}
 
               <Grid item xs={8}>
                 <Card title="Squaremeter price development">
@@ -176,7 +175,7 @@ const App = () => {
         </div>
       </div>
 
-      <Popup title={'Add area to search'} openPopup={openPopup}>
+      <Popup title={"Add area to search"} openPopup={openPopup}>
         <Form filters={filters} handleFormSubmit={handleFormSubmit} />
       </Popup>
     </>
