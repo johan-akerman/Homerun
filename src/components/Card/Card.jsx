@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import Tooltip from '@material-ui/core/Tooltip';
 import Modal from '@material-ui/core/Modal';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import CloseIcon from '@material-ui/icons/Close';
 
 
@@ -21,7 +22,7 @@ export default function Grid(props) {
     };
  
 
-    let {title, children} = props;
+    let {title, description, children} = props;
 
 
     return (
@@ -29,9 +30,16 @@ export default function Grid(props) {
         <div className={styles.gridContainer}>
             <div className={styles.gridHeader}>
                 <Typography className={styles.title} variant="subtitle1" component="h5">{title}</Typography>
+               
                 <IconButton className={styles.expandMeBtn} edge="end" aria-label="delete" onClick={handleOpen} >
                     <Tooltip title="Expand" aria-label="expand">
                         <FullscreenIcon />
+                    </Tooltip>
+                </IconButton>
+
+                <IconButton className={styles.expandMeBtn} edge="end" aria-label="help" onClick={handleOpen} >
+                    <Tooltip title={description} aria-label="help">
+                        <HelpOutlineIcon />
                     </Tooltip>
                 </IconButton>
             </div>

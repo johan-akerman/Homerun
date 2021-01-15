@@ -15,7 +15,6 @@ const SquareMeterPriceDevelopment = props => {
         <h1>loading...</h1>  
     );
 
-    
     const notLoading = (
         (<Line 
             data={{
@@ -36,13 +35,6 @@ const SquareMeterPriceDevelopment = props => {
         />
     ));
 
-    // const notLoading = (
-    //     <ul>
-    //         {allFilteredApartments.map(apartment => {
-    //              return <li>{apartment.size}</li>
-    //         })}
-    //     </ul>
-    // );
 
     return allFilteredApartments.length > 0 ? notLoading : loading
 }

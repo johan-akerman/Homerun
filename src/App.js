@@ -9,11 +9,11 @@ import FilterList from "./components/FilterList/FilterList";
 import Popup from "./components/Popup/Popup";
 import Card from "./components/Card/Card";
 import Form from "./components/Form/Form";
-import Table from "./components/Table/Table";
+import Table from "./components/Visualizations/Table/Table";
 import Map from "./components/Map/Map";
 import DoughnutChart from "./components/DoughnutChart/DoughnutChart";
 import BarChart from "./components/BarChart/BarChart";
-import SquareMeterPriceDevelopment from "./components/Charts/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
+import SquareMeterPriceDevelopment from "./components/Visualizations/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
 
 const url = "/apartments.json";
 const App = () => {
@@ -21,7 +21,9 @@ const App = () => {
   const [filters, setFilters] = useState([]);
   const [allApartments, setAllApartments] = useState([]);
   const [filteredApartments, setFilteredApartments] = useState([]);
+  const [myFilters, setMyFilters] = useState([]);
 
+  //sets allApartments to all apartments from JSON file.
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(url);
@@ -117,57 +119,65 @@ const App = () => {
         <div className={styles.mainContainer}>
           <div className={styles.mainContainerContent}>
             <Grid container spacing={1}>
-              {/* <Grid item xs={12}>
-                <Card title="Map with filtersets">
-                  <Map />
-                </Card>
-              </Grid> */}
-
-              <Grid item xs={8}>
-                <Card title="Squaremeter price development">
-                  <SquareMeterPriceDevelopment data={filteredApartments} />
-                </Card>
-              </Grid>
-
-              {/* <Grid item xs={8}>
-                        <Card title="OLD !!!! Squaremeter price development"> 
-                            <LineChart data={this.state.apartments} filters={this.state.filters}/>
-                        </Card>
-                    </Grid> */}
-
-              <Grid item xs={4}>
-                <Card title="Bar Chart with average prisutveckling">
-                  <BarChart />
-                </Card>
-              </Grid>
-
-              <Grid item xs={8}>
-                <Card title="Summary">
+              <Grid item xs={12}>
+                <Card
+                  title="Summary"
+                  description="Description about this card goes here."
+                >
                   <Table />
                 </Card>
               </Grid>
 
+              <Grid item xs={8}>
+                <Card
+                  title="Squaremeter price development"
+                  description="Description about this card goes here."
+                >
+                  <SquareMeterPriceDevelopment data={filteredApartments} />
+                </Card>
+              </Grid>
+
               <Grid item xs={4}>
-                <Card title="Total sales">
+                <Card
+                  title="Average monthly fee"
+                  description="Description about this card goes here."
+                >
+                  {/* Have a bar chart */}
+                  {/* <BarChart /> */}
+                </Card>
+              </Grid>
+
+              <Grid item xs={8}>
+                <Card
+                  title="Number of sales"
+                  description="Description about this card goes here."
+                >
+                  <DoughnutChart />
+                </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+                <Card
+                  title="Sold apartments map"
+                  description="Description about this card goes here."
+                ></Card>
+              </Grid>
+
+              <Grid item xs={4}>
+                <Card
+                  title="Broker market share"
+                  description="Description about this card goes here."
+                >
                   <DoughnutChart />
                 </Card>
               </Grid>
 
               <Grid item xs={8}>
-                <Card title="Number of sales">
+                <Card
+                  title="Brokers average price development"
+                  description="Description about this card goes here."
+                >
                   <h1>test</h1>
-                </Card>
-              </Grid>
-
-              <Grid item xs={8}>
-                <Card title="Average prisutveckling / mäklare">
-                  <h1>test</h1>
-                </Card>
-              </Grid>
-
-              <Grid item xs={4}>
-                <Card title="Bar Chart med average fee (last year)">
-                  <BarChart />
                 </Card>
               </Grid>
             </Grid>

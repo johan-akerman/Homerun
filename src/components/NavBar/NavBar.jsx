@@ -2,8 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import HomeIcon from '@material-ui/icons/Home';
 import Typography from '@material-ui/core/Typography';
 import styles from "./NavBar.module.css";
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
   },
 }));
 
@@ -24,10 +31,14 @@ export default function DenseAppBar() {
    
         <Toolbar className={styles.navbar}>
       
-          <Typography variant="h6" color="inherit">
-       
-Homerun
+     
+          <HomeIcon className={styles.logo}/>
+          <Typography variant="h6" className={classes.title}>
+              Homerun
           </Typography>
+          <Button color="inherit">About</Button>
+          <Button color="inherit">How it works</Button>
+          <Button color="inherit">Feedback</Button>
         </Toolbar>
       </AppBar>
     </div>
