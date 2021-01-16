@@ -11,7 +11,7 @@ import Card from "./components/Card/Card";
 import Form from "./components/Form/Form";
 import Summary from "./components/Visualizations/Summary/Summary";
 import AverageMonthlyFee from "./components/Visualizations/AverageMonthlyFee/AverageMonthlyFee";
-
+import BrokerMarketShare from "./components/Visualizations/BrokerMarketShare/BrokerMarketShare";
 import SquareMeterPriceDevelopment from "./components/Visualizations/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
 
 const url = "/apartments.json";
@@ -20,7 +20,6 @@ const App = () => {
   const [filters, setFilters] = useState([]);
   const [allApartments, setAllApartments] = useState([]);
   const [filteredApartments, setFilteredApartments] = useState([]);
-  const [allSelectedApartments, setAllSelectedApartments] = useState([]);
 
   //sets allApartments to all apartments from JSON file.
   useEffect(() => {
@@ -190,7 +189,9 @@ const App = () => {
                 <Card
                   title="Broker market share"
                   description="Description about this card goes here."
-                ></Card>
+                >
+                  <BrokerMarketShare data={filteredApartments} />
+                </Card>
               </Grid>
 
               <Grid item xs={8}>
