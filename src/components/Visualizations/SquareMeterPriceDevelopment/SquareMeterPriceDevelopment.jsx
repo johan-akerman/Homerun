@@ -9,7 +9,6 @@ const SquareMeterPriceDevelopment = props => {
         setAllFilteredApartments(props.data);
     }, [props.data]);
 
-    console.log(allFilteredApartments)
 
     const loading = (
         <h1>loading...</h1>  

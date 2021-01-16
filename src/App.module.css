@@ -1,42 +1,47 @@
-
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-    height: 100%;
-    background-color: #fff;
-    margin: 0; 
+  height: 100%;
+  background-color: #fff;
+  margin: 0;
 }
 
 .container {
+  height: 92vh;
+}
 
-    height: 92vh;
+.buttonContainer {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
 }
 
 .sideBar {
-    background-color: white;
-    width: 25vw;
-    display: inline-block;
-    height: 100%;
-    overflow: auto;
+  background-color: white;
+  width: 25vw;
+  display: inline-block;
+  height: 100%;
+  overflow: auto;
 }
 
 .sideBarContent {
-    padding: 55px 8px;
+  padding: 55px 6px;
+  height: 85%;
+  position: relative;
 }
 
 .mainContainer {
-   width: 75vw !important;
-   display: inline-block;
-   background-color: #F7F8F9 !important;
-   overflow: auto;
-   vertical-align: top;
-height: 100%;
-
-
+  width: 75vw !important;
+  display: inline-block;
+  background-color: #f7f8f9 !important;
+  overflow: auto;
+  vertical-align: top;
+  height: 100%;
 }
 
 .mainContainerContent {
-    padding: 16px
+  padding: 16px;
 }

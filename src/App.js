@@ -9,10 +9,9 @@ import FilterList from "./components/FilterList/FilterList";
 import Popup from "./components/Popup/Popup";
 import Card from "./components/Card/Card";
 import Form from "./components/Form/Form";
-import Table from "./components/Visualizations/Table/Table";
-import Map from "./components/Map/Map";
-import DoughnutChart from "./components/DoughnutChart/DoughnutChart";
-import BarChart from "./components/BarChart/BarChart";
+import Summary from "./components/Visualizations/Summary/Summary";
+import AverageMonthlyFee from "./components/Visualizations/AverageMonthlyFee/AverageMonthlyFee";
+
 import SquareMeterPriceDevelopment from "./components/Visualizations/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
 
 const url = "/apartments.json";
@@ -21,7 +20,7 @@ const App = () => {
   const [filters, setFilters] = useState([]);
   const [allApartments, setAllApartments] = useState([]);
   const [filteredApartments, setFilteredApartments] = useState([]);
-  const [myFilters, setMyFilters] = useState([]);
+  const [allSelectedApartments, setAllSelectedApartments] = useState([]);
 
   //sets allApartments to all apartments from JSON file.
   useEffect(() => {
@@ -34,36 +33,18 @@ const App = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const tmpAllApartments = [...allApartments];
-    const newFilteredApartments = [];
-    filters.forEach((filter) => {
-      tmpAllApartments.forEach((apartment) => {
-        if (filter.area === apartment.area) {
-          if (
-            filter.rooms[0] <= apartment.rooms &&
-            filter.rooms[1] >= apartment.rooms
-          ) {
-            if (
-              filter.squareMeters[0] <= apartment.size &&
-              filter.squareMeters[1] >= apartment.size
-            ) {
-              if (
-                filter.price[0] * 1000000 <= apartment.askPrice &&
-                filter.price[1] * 1000000 >= apartment.askPrice
-              ) {
-                if (filter.fee * 1000 >= apartment.monthlyFee) {
-                  newFilteredApartments.push(apartment);
-                }
-              }
-            }
-          }
-        }
-      });
-    });
-    setFilteredApartments(newFilteredApartments);
-  }, [allApartments, filters]);
+  //Opens popup on button click.
+  const handleAdd = () => {
+    if (filters.length > 4) {
+      alert(
+        "For best visualization results we have limited the amount of apartments to 5 at the time. Remove any of your previous filters if you want to add a new one."
+      );
+    } else {
+      setOpenPopup(true);
+    }
+  };
 
+  //Submits form.
   const handleFormSubmit = (data) => {
     const tmpFilters = [...filters];
     tmpFilters.push(data);
@@ -71,8 +52,7 @@ const App = () => {
     setOpenPopup(false);
   };
 
-  const handleAdd = () => setOpenPopup(true);
-
+  //Deletes filter
   const handleDelete = (i) => {
     const splicedFilters = [...filters];
     splicedFilters.splice(i, 1);
@@ -97,6 +77,46 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    const newFilteredApartments = [];
+    filters.forEach((filter, index) => {
+      const collection = []; //all apartments in a specific filter / search.
+      allApartments.forEach((apartment) => {
+        if (filter.area === apartment.area) {
+          if (
+            filter.rooms[0] <= apartment.rooms &&
+            filter.rooms[1] >= apartment.rooms
+          ) {
+            if (
+              filter.squareMeters[0] <= apartment.size &&
+              filter.squareMeters[1] >= apartment.size
+            ) {
+              if (
+                filter.price[0] * 1000000 <= apartment.askPrice &&
+                filter.price[1] * 1000000 >= apartment.askPrice
+              ) {
+                if (filter.fee * 1000 >= apartment.monthlyFee) {
+                  collection.push(apartment); // add apartment that fullfills all tests to the collection.
+                }
+              }
+            }
+          }
+        }
+      });
+
+      if (collection.length > 0) {
+        newFilteredApartments.push(collection);
+      } else {
+        alert(
+          "No apartment like this has been sold. Try to broaden your search for better results!"
+        );
+        handleDelete(index);
+        handleAdd();
+      }
+    });
+    setFilteredApartments(newFilteredApartments);
+  }, [allApartments, filters]);
+
   return (
     <>
       <NavBar />
@@ -104,15 +124,21 @@ const App = () => {
         <div className={styles.sideBar}>
           <div className={styles.sideBarContent}>
             <NoAddedFilters />
-            <Button
-              variant="outlined"
-              size="medium"
-              color="primary"
-              startIcon={<AddIcon />}
-              onClick={() => handleAdd()}
-            >
-              Add new area
-            </Button>
+            <div className={styles.buttonContainer}>
+              <Typography variant="overline">
+                Compare with other areas
+              </Typography>
+              <br></br>
+              <Button
+                variant="contained"
+                size="medium"
+                color="primary"
+                startIcon={<AddIcon />}
+                onClick={() => handleAdd()}
+              >
+                Add new area
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -124,7 +150,7 @@ const App = () => {
                   title="Summary"
                   description="Description about this card goes here."
                 >
-                  <Table />
+                  <Summary data={filteredApartments} />
                 </Card>
               </Grid>
 
@@ -142,8 +168,7 @@ const App = () => {
                   title="Average monthly fee"
                   description="Description about this card goes here."
                 >
-                  {/* Have a bar chart */}
-                  {/* <BarChart /> */}
+                  <AverageMonthlyFee data={filteredApartments} />
                 </Card>
               </Grid>
 
@@ -151,9 +176,7 @@ const App = () => {
                 <Card
                   title="Number of sales"
                   description="Description about this card goes here."
-                >
-                  <DoughnutChart />
-                </Card>
+                ></Card>
               </Grid>
 
               <Grid item xs={4}>
@@ -167,9 +190,7 @@ const App = () => {
                 <Card
                   title="Broker market share"
                   description="Description about this card goes here."
-                >
-                  <DoughnutChart />
-                </Card>
+                ></Card>
               </Grid>
 
               <Grid item xs={8}>

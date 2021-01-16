@@ -4,7 +4,7 @@
     "address": "Tavastgatan 13",
     "endPrice": 4400000,
     "askPrice": 3750000,
-    "pricePerSquare": "104762",
+    "pricePerSquare": 104762,
     "rooms": 2.0,
     "size": 42.0,
     "monthlyFee": 2826,
