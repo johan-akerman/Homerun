@@ -12,7 +12,9 @@ import Form from "./components/Form/Form";
 import Summary from "./components/Visualizations/Summary/Summary";
 import AverageMonthlyFee from "./components/Visualizations/AverageMonthlyFee/AverageMonthlyFee";
 import BrokerMarketShare from "./components/Visualizations/BrokerMarketShare/BrokerMarketShare";
+import BrokersAveragePriceDevelopment from "./components/Visualizations/BrokersAveragePriceDevelopment/BrokersAveragePriceDevelopment";
 import SquareMeterPriceDevelopment from "./components/Visualizations/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
+import NumberOfSales from "./components/Visualizations/NumberOfSales/NumberOfSales";
 
 const url = "/apartments.json";
 const App = () => {
@@ -155,6 +157,22 @@ const App = () => {
 
               <Grid item xs={8}>
                 <Card
+                  title="Number of sales"
+                  description="Description about this card goes here."
+                >
+                  <NumberOfSales data={filteredApartments} />
+                </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+                <Card
+                  title="Sold apartments map"
+                  description="Description about this card goes here."
+                ></Card>
+              </Grid>
+
+              <Grid item xs={8}>
+                <Card
                   title="Squaremeter price development"
                   description="Description about this card goes here."
                 >
@@ -171,20 +189,6 @@ const App = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={8}>
-                <Card
-                  title="Number of sales"
-                  description="Description about this card goes here."
-                ></Card>
-              </Grid>
-
-              <Grid item xs={4}>
-                <Card
-                  title="Sold apartments map"
-                  description="Description about this card goes here."
-                ></Card>
-              </Grid>
-
               <Grid item xs={4}>
                 <Card
                   title="Broker market share"
@@ -196,10 +200,10 @@ const App = () => {
 
               <Grid item xs={8}>
                 <Card
-                  title="Brokers average price development"
+                  title="Brokers average price development in %"
                   description="Description about this card goes here."
                 >
-                  <h1>test</h1>
+                  <BrokersAveragePriceDevelopment data={filteredApartments} />
                 </Card>
               </Grid>
             </Grid>

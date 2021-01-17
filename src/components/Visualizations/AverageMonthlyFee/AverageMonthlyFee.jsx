@@ -43,7 +43,6 @@ const AverageMonthlyFee = props => {
         });
         setAllAverageFees(averageFees)
         setAllTitles(allAreas);
-        console.log(allAverageFees)
     }, [allFilteredApartments])
 
 

@@ -24,7 +24,7 @@ const Summary = props => {
         <TableHead>
           <TableRow>
             <TableCell>Tag</TableCell>
-            <TableCell>Område</TableCell>
+            <TableCell>Area</TableCell>
             <TableCell align="right">No of sales</TableCell>
             <TableCell align="right">SEK/ sqm</TableCell>
             <TableCell align="right">Average ask price</TableCell>
@@ -47,7 +47,7 @@ const Summary = props => {
               else if (i === 3) return '#9c27b0';
               else if (i === 4) return '#673ab7';
             };
-            
+
             return (
               <TableRow key={`Table Row${item.date} | ${index}`}>
                 <TableCell> <div
