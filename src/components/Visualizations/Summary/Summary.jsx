@@ -23,13 +23,12 @@ const Summary = props => {
       >
         <TableHead>
           <TableRow>
-            <TableCell>Tag</TableCell>
             <TableCell>Area</TableCell>
-            <TableCell align="right">No of sales</TableCell>
-            <TableCell align="right">SEK/ sqm</TableCell>
-            <TableCell align="right">Average ask price</TableCell>
-            <TableCell align="right">Average end price</TableCell>
-            <TableCell align="right">Price development</TableCell>
+            <TableCell align="left">Transactions</TableCell>
+            <TableCell align="left">sqm price</TableCell>
+            <TableCell align="left">Ask price</TableCell>
+            <TableCell align="left">End price</TableCell>
+            <TableCell align="left">Price development</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -50,23 +49,21 @@ const Summary = props => {
 
             return (
               <TableRow key={`Table Row${item.date} | ${index}`}>
-                <TableCell> <div
+                <TableCell component="th" scope="row">
+                <div
               style={{
-                marginRight: 14,
                 borderRadius: 100,
                 width: 14,
                 height: 14,
                 backgroundColor: getColor(index),
               }}
-            /></TableCell>
-                <TableCell component="th" scope="row">
-                  {item[0].area}
+            />
                 </TableCell>
-                <TableCell align="right">{item.length}</TableCell>
-                <TableCell align="right">{averageSquareMeterPrice}</TableCell>
-                <TableCell align="right">{averageAskPrice}</TableCell>
-                <TableCell align="right">{averageEndPrice}</TableCell>
-                <TableCell align="right">{averagePriceDevelopment}</TableCell>
+                <TableCell align="left">{item.length}</TableCell>
+                <TableCell align="left">{averageSquareMeterPrice}</TableCell>
+                <TableCell align="left">{averageAskPrice}</TableCell>
+                <TableCell align="left">{averageEndPrice}</TableCell>
+                <TableCell align="left">{averagePriceDevelopment}</TableCell>
             </TableRow>
             )
             })}

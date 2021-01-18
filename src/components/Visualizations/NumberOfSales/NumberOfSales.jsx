@@ -19,6 +19,8 @@ const options = {
 
 const NumberOfSales = props => {
     const [allFilteredApartments, setAllFilteredApartments] = useState([]);
+    const [dailyData, setDailyData] = useState([]);
+
     const [dictionary, setDictionary] = useState([]);
 
     //Gets data via props from App component. Sets it to allFilteredApartments.
@@ -38,10 +40,39 @@ const NumberOfSales = props => {
                 }
             });
             parentDictionary.push(tmpDictionary)
-            console.log(parentDictionary)
         });
         setDictionary(parentDictionary)
     }, [allFilteredApartments])
+
+
+//    [{
+//     filterIndex: 0,
+//     date: "2020-11-15",
+//     numberOfSales: 10,
+//    },
+// ] 
+
+    useEffect(() => {  //creates daily data
+        let parentDictionary = []
+        console.log(allFilteredApartments)
+
+        allFilteredApartments.map((item) => { //for each apartment 
+            let tmpDictionary = {}
+            item.map((current) => {  //loop through each filter
+
+
+
+                if (tmpDictionary[current.date]) { 
+                    tmpDictionary[current.date] = tmpDictionary[current.date] + 1;
+                } else { 
+                    tmpDictionary[current.date] = 1;
+                }
+            });
+            parentDictionary.push(tmpDictionary)
+        });
+        setDictionary(parentDictionary)
+    }, [allFilteredApartments])
+
 
     const dataSets = [];
     const dataSet = {

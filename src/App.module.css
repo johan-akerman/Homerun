@@ -12,6 +12,10 @@ body {
   height: 92vh;
 }
 
+.button {
+  background-color: #11a384 !important;
+}
+
 .buttonContainer {
   position: absolute;
   bottom: 50px;

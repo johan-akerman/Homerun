@@ -15,6 +15,7 @@ import BrokerMarketShare from "./components/Visualizations/BrokerMarketShare/Bro
 import BrokersAveragePriceDevelopment from "./components/Visualizations/BrokersAveragePriceDevelopment/BrokersAveragePriceDevelopment";
 import SquareMeterPriceDevelopment from "./components/Visualizations/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
 import NumberOfSales from "./components/Visualizations/NumberOfSales/NumberOfSales";
+import Map from "./components/Visualizations/Map/Map";
 
 const url = "/apartments.json";
 const App = () => {
@@ -132,9 +133,10 @@ const App = () => {
               <br></br>
               <Button
                 variant="contained"
-                size="medium"
+                size="large"
                 color="primary"
                 startIcon={<AddIcon />}
+                className={styles.button}
                 onClick={() => handleAdd()}
               >
                 Add new area
@@ -168,7 +170,9 @@ const App = () => {
                 <Card
                   title="Sold apartments map"
                   description="Description about this card goes here."
-                ></Card>
+                >
+                  <Map />
+                </Card>
               </Grid>
 
               <Grid item xs={8}>

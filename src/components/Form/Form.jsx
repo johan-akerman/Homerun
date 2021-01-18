@@ -91,6 +91,7 @@ const Form = (props) => {
         </Typography>
 
         <Slider
+          className={styles.slider}
           value={rooms}
           step={0.5}
           min={1}
@@ -101,11 +102,13 @@ const Form = (props) => {
         />
 
         <Typography id="range-slider" gutterBottom>
-          Price (million SEK)
+          Price (mSEK)
         </Typography>
 
         <Slider
           value={price}
+          className={styles.slider}
+
           onChange={handlePriceChange}
           valueLabelDisplay="auto"
           aria-labelledby="range-slider"
@@ -115,11 +118,14 @@ const Form = (props) => {
         />
 
         <Typography id="range-slider" gutterBottom>
-          Livingarea (squaremeters)
+          Livingarea (sqm)
         </Typography>
+    
 
         <Slider
           value={squareMeters}
+          className={styles.slider}
+
           onChange={handleSquareMetersChange}
           valueLabelDisplay="auto"
           aria-labelledby="range-slider"
@@ -129,10 +135,12 @@ const Form = (props) => {
         />
 
         <Typography id="discrete-slider" gutterBottom>
-          Highest fee (thousand SEK)
+          Max monthly fee (thousand SEK)
         </Typography>
         <Slider
           value={fee}
+          className={styles.slider}
+
           aria-labelledby="discrete-slider"
           valueLabelDisplay="auto"
           step={0.5}
