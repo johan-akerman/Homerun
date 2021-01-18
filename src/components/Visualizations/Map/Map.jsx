@@ -13,7 +13,7 @@ const Map = () => {
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/light-v10",
       center: [18.0649, 59.33258], 
-      zoom: 10.5,
+      zoom: 11.5,
       dragPan: false,
 
     });

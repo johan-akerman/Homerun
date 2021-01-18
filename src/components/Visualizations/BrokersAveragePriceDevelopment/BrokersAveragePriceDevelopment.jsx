@@ -59,7 +59,7 @@ const BrokersAveragePriceDevelopment = props => {
 
         for (var i = 0;i<=Object.values(askPriceMap).length-1;i++) { //Does not work: loop through all and calculate difference
             console.log(Object.values(endPriceMap)[i])
-            difference.push(Math.round(((Object.values(askPriceMap)[i] - Object.values(endPriceMap)[i]) / Object.values(askPriceMap)[i]) * 100));
+            difference.push(Math.round(((Object.values(endPriceMap)[i] - Object.values(askPriceMap)[i]) / Object.values(askPriceMap)[i]) * 100));
         }
         setPriceDifference(difference);
     }, [allFilteredApartments])

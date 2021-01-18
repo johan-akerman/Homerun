@@ -5,6 +5,23 @@ import {Line} from "react-chartjs-2";
 const SquareMeterPriceDevelopment = props => {
    const [allFilteredApartments, setAllFilteredApartments] = useState([]);
 
+
+
+const options = {
+    maintainAspectRatio: false,
+    legend: {
+        display: false
+    }, scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  }
+
     useEffect(() => {
         setAllFilteredApartments(props.data);
     }, [props.data]);
@@ -15,7 +32,7 @@ const SquareMeterPriceDevelopment = props => {
     );
 
     const notLoading = (
-        (<Line 
+        (<Line  options={options}
             data={{
                 labels: allFilteredApartments.map(({date}) => date), 
                 filtersets: [{

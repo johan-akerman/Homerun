@@ -157,7 +157,7 @@ const App = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={8}>
+              <Grid item xs={6}>
                 <Card
                   title="Number of sales"
                   description="Description about this card goes here."
@@ -166,21 +166,20 @@ const App = () => {
                 </Card>
               </Grid>
 
-              <Grid item xs={4}>
-                <Card
-                  title="Sold apartments map"
-                  description="Description about this card goes here."
-                >
-                  <Map />
-                </Card>
-              </Grid>
-
-              <Grid item xs={8}>
+              <Grid item xs={6}>
                 <Card
                   title="Squaremeter price development"
                   description="Description about this card goes here."
                 >
                   <SquareMeterPriceDevelopment data={filteredApartments} />
+                </Card>
+              </Grid>
+              <Grid item xs={8}>
+                <Card
+                  title="Sold apartments map"
+                  description="Description about this card goes here."
+                >
+                  <Map />
                 </Card>
               </Grid>
 
