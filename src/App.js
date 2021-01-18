@@ -16,6 +16,7 @@ import BrokersAveragePriceDevelopment from "./components/Visualizations/BrokersA
 import SquareMeterPriceDevelopment from "./components/Visualizations/SquareMeterPriceDevelopment/SquareMeterPriceDevelopment";
 import NumberOfSales from "./components/Visualizations/NumberOfSales/NumberOfSales";
 import Map from "./components/Visualizations/Map/Map";
+import illustration from "./houseIllustration.svg";
 
 const url = "/apartments.json";
 const App = () => {
@@ -97,9 +98,10 @@ const App = () => {
                 filter.price[0] * 1000000 <= apartment.askPrice &&
                 filter.price[1] * 1000000 >= apartment.askPrice
               ) {
-                if (filter.fee * 1000 >= apartment.monthlyFee) {
-                  collection.push(apartment); // add apartment that fullfills all tests to the collection.
-                }
+                //   if (filter.fee * 1000 >= apartment.monthlyFee) {
+                //     collection.push(apartment); // add apartment that fullfills all tests to the collection.
+                //   }
+                collection.push(apartment); // add apartment that fullfills all tests to the collection.
               }
             }
           }
@@ -128,7 +130,7 @@ const App = () => {
             <NoAddedFilters />
             <div className={styles.buttonContainer}>
               <Typography variant="overline">
-                Compare with other areas
+                Compare with other filters
               </Typography>
               <br></br>
               <Button
@@ -139,7 +141,7 @@ const App = () => {
                 className={styles.button}
                 onClick={() => handleAdd()}
               >
-                Add new area
+                Add new filter
               </Button>
             </div>
           </div>
@@ -147,6 +149,8 @@ const App = () => {
 
         <div className={styles.mainContainer}>
           <div className={styles.mainContainerContent}>
+            {/* <img src={illustration} alt="React Logo" /> */}
+
             <Grid container spacing={1}>
               <Grid item xs={12}>
                 <Card
@@ -174,7 +178,7 @@ const App = () => {
                   <SquareMeterPriceDevelopment data={filteredApartments} />
                 </Card>
               </Grid>
-              <Grid item xs={8}>
+              {/* <Grid item xs={8}>
                 <Card
                   title="Sold apartments map"
                   description="Description about this card goes here."
@@ -190,7 +194,7 @@ const App = () => {
                 >
                   <AverageMonthlyFee data={filteredApartments} />
                 </Card>
-              </Grid>
+              </Grid> */}
 
               <Grid item xs={4}>
                 <Card

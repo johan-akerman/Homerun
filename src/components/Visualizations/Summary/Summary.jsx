@@ -63,13 +63,13 @@ const Summary = props => {
               <CountUp start={0} end= {allFilteredApartments.length} duration={1} separator="." />
   
                </Typography>
-              <Typography variant="caption" gutterBottom>Filters</Typography>
+              <Typography variant="caption" gutterBottom>Tot. filters</Typography>
             </TableCell>
 
             <TableCell align="left" className={styles.cell}>
               <Typography variant="h4">
                 <CountUp start={0} end= {totalTransactions} duration={1} separator="." /></Typography>
-              <Typography variant="caption" gutterBottom>Tot transactions</Typography>
+              <Typography variant="caption" gutterBottom>Tot. transactions</Typography>
             </TableCell>
 
             <TableCell align="left" className={styles.cell}>

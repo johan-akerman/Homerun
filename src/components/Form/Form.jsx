@@ -27,7 +27,7 @@ const Form = (props) => {
   const [price, setPrice] = React.useState([0, 10]);
   const [rooms, setRoom] = React.useState([1, 10]);
   const [squareMeters, setSquareMeters] = React.useState([0, 50]);
-  const [fee, setFee] = React.useState(20);
+  // const [fee, setFee] = React.useState(20);
 
   const handleAreaChange = (event) => {
     setArea(event.target.value);
@@ -45,9 +45,9 @@ const Form = (props) => {
     setSquareMeters(newValue);
   };
 
-  const handleFeeChange = (event, newValue) => {
-    setFee(newValue);
-  };
+  // const handleFeeChange = (event, newValue) => {
+  //   setFee(newValue);
+  // };
 
   let submitMe = (e) => {
     e.preventDefault();
@@ -60,7 +60,7 @@ const Form = (props) => {
         price,
         rooms,
         squareMeters,
-        fee,
+        // fee,
       });
     }
   };
@@ -134,7 +134,7 @@ const Form = (props) => {
           max={150}
         />
 
-        <Typography id="discrete-slider" gutterBottom>
+        {/* <Typography id="discrete-slider" gutterBottom>
           Max monthly fee (thousand SEK)
         </Typography>
         <Slider
@@ -147,7 +147,7 @@ const Form = (props) => {
           onChange={handleFeeChange}
           min={0}
           max={25}
-        />
+        /> */}
       </div>
 
       <br />

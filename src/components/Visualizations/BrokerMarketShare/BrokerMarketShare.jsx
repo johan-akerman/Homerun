@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Pie } from "react-chartjs-2";  
+import { Doughnut } from "react-chartjs-2";  
 
 const options = {
     maintainAspectRatio: false,
@@ -51,7 +51,7 @@ const BrokerMarketShare = props => {
         ],
       }
 
-      return <Pie data={data} options={options}/>
+      return <Doughnut data={data} options={options}/>
 }
   
 export default BrokerMarketShare;

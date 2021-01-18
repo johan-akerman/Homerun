@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from "react-chartjs-2";  
 
-
 const options = {
     maintainAspectRatio: false,
     legend: {
@@ -16,12 +15,19 @@ const options = {
       ],
     },
   }
+  
+let getColor = (i) => {
+    if (i === 0) return '#8bc34a';
+    else if (i === 1) return '#03a9f4';
+    else if (i === 2) return '#ff9800';
+    else if (i === 3) return '#9c27b0';
+    else if (i === 4) return '#673ab7';
+};
 
 const NumberOfSales = props => {
     const [allFilteredApartments, setAllFilteredApartments] = useState([]);
-    const [dailyData, setDailyData] = useState([]);
-
     const [dictionary, setDictionary] = useState([]);
+    const [theDataSet, setTheDataSet] = useState([]);
 
     //Gets data via props from App component. Sets it to allFilteredApartments.
     useEffect(() => {
@@ -30,77 +36,43 @@ const NumberOfSales = props => {
 
     useEffect(() => {
         let parentDictionary = []
-        allFilteredApartments.map((item) => { 
-            let tmpDictionary = {}
-            item.map((current) => { 
-                if (tmpDictionary[current.date]) { 
-                    tmpDictionary[current.date] = tmpDictionary[current.date] + 1;
-                } else { 
-                    tmpDictionary[current.date] = 1;
+        allFilteredApartments.map((item) => {  //for each filter
+            let tmpDictionary = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0}
+            item.map((i) => {  //for each apartment in the filter
+                let month = new Date(i.date).getMonth() + 1; //make a date object
+                if (tmpDictionary[month]) { //if the month exists. Add 1 to the number of sales for that month.
+                    tmpDictionary[month] = tmpDictionary[month] + 1;
+                } else {
+                    tmpDictionary[month] = 1;
                 }
             });
             parentDictionary.push(tmpDictionary)
         });
         setDictionary(parentDictionary)
+        console.log(dictionary)
     }, [allFilteredApartments])
 
-
-//    [{
-//     filterIndex: 0,
-//     date: "2020-11-15",
-//     numberOfSales: 10,
-//    },
-// ] 
-
-    useEffect(() => {  //creates daily data
-        let parentDictionary = []
-        console.log(allFilteredApartments)
-
-        allFilteredApartments.map((item) => { //for each apartment 
-            let tmpDictionary = {}
-            item.map((current) => {  //loop through each filter
-
-
-
-                if (tmpDictionary[current.date]) { 
-                    tmpDictionary[current.date] = tmpDictionary[current.date] + 1;
-                } else { 
-                    tmpDictionary[current.date] = 1;
-                }
-            });
-            parentDictionary.push(tmpDictionary)
+    //Update chart
+    useEffect(() => {
+        let myDataSets = []
+        allFilteredApartments.map((item, index) => { //for each filter
+            let tmpObject = {
+                label: item[0].area,
+                data: Object.values(dictionary[index]),
+                fill: false,
+                backgroundColor: getColor(index),
+                borderColor: getColor(index),
+            }
+            myDataSets.push(tmpObject)
         });
-        setDictionary(parentDictionary)
-    }, [allFilteredApartments])
-
-
-    const dataSets = [];
-    const dataSet = {
-        label: 'test',
-        data: [],
-        backgroundColor: '#000', 
-    }
-
-    const data = {
-        labels: Object.keys(dictionary),
-        datasets: [
-            dictionary.map((item) => {
- // {
-            //     label: '# of Votes',
-            //     data: Object.values(dictionary),
-            //     fill: false,
-            //     backgroundColor: '#8bc34a',
-            //     borderColor: '#8bc34a',
-            //   },
-            })
-        ],
-      }
-      
-    
-     
+        setTheDataSet(myDataSets);
+        console.log(theDataSet);
+    }, [dictionary])
  
-
-
+    const data = {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] ,
+        datasets: theDataSet,
+      }
       return <Line data={data} options={options} />
 }
   
