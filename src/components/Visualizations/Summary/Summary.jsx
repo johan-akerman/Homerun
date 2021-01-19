@@ -130,10 +130,10 @@ const Summary = props => {
             /> 
                 </TableCell>
                 <TableCell align="left" className={styles.cell}> {item.length}</TableCell>
-                <TableCell align="left" className={styles.cell}>{averageSquareMeterPrice}</TableCell>
-                <TableCell align="left" className={styles.cell}>{averageAskPrice}</TableCell>
-                <TableCell align="left" className={styles.cell}>{averageEndPrice}</TableCell>
-                <TableCell align="left" className={styles.cell}>{averagePriceDevelopment}</TableCell>
+                <TableCell align="left" className={styles.cell}>{Math.round(averageSquareMeterPrice)}</TableCell>
+                <TableCell align="left" className={styles.cell}>{Math.round(averageAskPrice)}</TableCell>
+                <TableCell align="left" className={styles.cell}>{Math.round(averageEndPrice)}</TableCell>
+                <TableCell align="left" className={styles.cell}>{Math.round(averagePriceDevelopment)}</TableCell>
             </TableRow>
             )
 

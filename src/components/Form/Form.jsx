@@ -25,8 +25,8 @@ const Form = (props) => {
   const classes = useStyles();
   const [area, setArea] = React.useState('Östermalm');
   const [price, setPrice] = React.useState([0, 10]);
-  const [rooms, setRoom] = React.useState([1, 10]);
-  const [squareMeters, setSquareMeters] = React.useState([0, 50]);
+  const [rooms, setRoom] = React.useState([1, 5]);
+  const [squareMeters, setSquareMeters] = React.useState([0, 100]);
   // const [fee, setFee] = React.useState(20);
 
   const handleAreaChange = (event) => {
@@ -80,6 +80,7 @@ const Form = (props) => {
           <MenuItem value={'Östermalm'}>Östermalm</MenuItem>
           <MenuItem value={'Södermalm'}>Södermalm</MenuItem>
           <MenuItem value={'Kungsholmen'}>Kungsholmen</MenuItem>
+          <MenuItem value={'Vasastan'}>Vasastan</MenuItem>
         </Select>
       </FormControl>
 
@@ -95,7 +96,7 @@ const Form = (props) => {
           value={rooms}
           step={0.5}
           min={1}
-          max={15}
+          max={10}
           onChange={handleRoomChange}
           valueLabelDisplay="auto"
           aria-labelledby="range-slider"
@@ -114,7 +115,7 @@ const Form = (props) => {
           aria-labelledby="range-slider"
           step={0.25}
           min={0.5}
-          max={13.5}
+          max={20}
         />
 
         <Typography id="range-slider" gutterBottom>
@@ -130,7 +131,7 @@ const Form = (props) => {
           valueLabelDisplay="auto"
           aria-labelledby="range-slider"
           step={5}
-          min={20}
+          min={15}
           max={150}
         />
 
