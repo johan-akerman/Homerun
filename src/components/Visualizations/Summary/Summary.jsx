@@ -35,7 +35,6 @@ const Summary = props => {
     let tmpTotalAskPrice = 0;
     let tmpTotalEndPrice = 0;
 
-    console.log(tmpTotalSqmPrice);
     allFilteredApartments.map((item) => { //for each filter
         item.map((apartment) => { //for each apartment in each filter
           tmpTotalTransactions = tmpTotalTransactions + 1;

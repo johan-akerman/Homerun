@@ -49,7 +49,6 @@ const NumberOfSales = props => {
             parentDictionary.push(tmpDictionary)
         });
         setDictionary(parentDictionary)
-        console.log(dictionary)
     }, [allFilteredApartments])
 
     //Update chart
@@ -66,7 +65,6 @@ const NumberOfSales = props => {
             myDataSets.push(tmpObject)
         });
         setTheDataSet(myDataSets);
-        console.log(theDataSet);
     }, [dictionary])
  
     const data = {

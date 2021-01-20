@@ -44,7 +44,6 @@ const BrokersAveragePriceDevelopment = props => {
             });
         });
 
-        console.log(priceDevelopmentDict);
         setPriceDevelopmentDictionary(priceDevelopmentDict);
     }, [allFilteredApartments])
 
