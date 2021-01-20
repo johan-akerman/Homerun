@@ -46,7 +46,6 @@ const SquareMeterPriceDevelopment = props => {
                 totalSqmPrice = totalSqmPrice + i.endPrice; // calculate new total sqm price
                 averageSqmPrice = Math.round(totalSqmPrice / tmpDictionary[month].length); // calculate average sqm price
 
-                
                 if (tmpDictionary[month]) { //if the month exists.
                    // tmpDictionary[month] = tmpDictionary[month] * 
                 } else {

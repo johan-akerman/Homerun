@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Bar } from "react-chartjs-2";  
 
-
 const options = {
     maintainAspectRatio: false,
     legend: {
@@ -20,77 +19,50 @@ const options = {
 
 const BrokersAveragePriceDevelopment = props => {
     const [allFilteredApartments, setAllFilteredApartments] = useState([]);
-    const [askPriceMap, setAskPriceMap] = useState([]);
-    const [endPriceMap, setEndPriceMap] = useState([]);
-    const [priceDifference, setPriceDifference] = useState([]);
-
+    const [priceDevelopmentDictionary, setPriceDevelopmentDictionary] = useState([]);
+    
     //Gets data via props from App component. Sets it to allFilteredApartments.
     useEffect(() => {
         setAllFilteredApartments(props.data);
     }, [props.data]);
 
     useEffect(() => {
-        let askPriceDict = {}
-        let endPriceDict = {}
-        let difference = []
+        let totalAskPriceDict = {} //object with key value pair for each broker with their total ask price.
+        let totalEndPriceDict = {} //object with key value pair for each broker with their total ask price.
+        let priceDevelopmentDict = {}
 
         allFilteredApartments.map((item) => { //for all filtered apartments
-            item.map((current) => { //go into each filter
-                    if (askPriceDict[current.broker]) { //if current broker key already exists in dictionary
-                        askPriceDict[current.broker] = askPriceDict[current.broker] + current.askPrice;
-                    } else { //if current broker key does not  exist in dictionary
-                        askPriceDict[current.broker] = current.askPrice;
-                    }
+            item.map((current) => { //for each apartment in each filter
+              if (totalAskPriceDict[current.broker]) {
+                totalAskPriceDict[current.broker] = totalAskPriceDict[current.broker] + current.askPrice;
+                totalEndPriceDict[current.broker] = totalEndPriceDict[current.broker] + current.endPrice;
+              } else {
+                totalAskPriceDict[current.broker] = current.askPrice;
+                totalEndPriceDict[current.broker] = current.endPrice;
+              }       
+              priceDevelopmentDict[current.broker] = Math.round(((totalEndPriceDict[current.broker] - totalAskPriceDict[current.broker]) /totalAskPriceDict[current.broker]) * 100);
             });
         });
 
-        allFilteredApartments.map((item) => { //for all filtered apartments
-            item.map((current) => { //go into each filter
-                    if (endPriceDict[current.broker]) { //if current broker key already exists in dictionary
-                        endPriceDict[current.broker] = endPriceDict[current.broker] + current.endPrice;
-                    } else { //if current broker key does not  exist in dictionary
-                        endPriceDict[current.broker] = current.endPrice;
-                    }
-            });
-        });
-
-        setEndPriceMap(endPriceDict)
-        setAskPriceMap(askPriceDict)
-
-        for (var i = 0;i<=Object.values(askPriceMap).length-1;i++) { //Does not work: loop through all and calculate difference
-            console.log(Object.values(endPriceMap)[i])
-            difference.push(Math.round(((Object.values(endPriceMap)[i] - Object.values(askPriceMap)[i]) / Object.values(askPriceMap)[i]) * 100));
-        }
-        setPriceDifference(difference);
+        console.log(priceDevelopmentDict);
+        setPriceDevelopmentDictionary(priceDevelopmentDict);
     }, [allFilteredApartments])
 
     const data = {
-        labels: Object.keys(askPriceMap),
+        labels: Object.keys(priceDevelopmentDictionary),
         datasets: [
           {
-            data: priceDifference,
+            data: Object.values(priceDevelopmentDictionary),
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
+              '#8bc34a',
+              '#03a9f4',
+              '#ff9800',
+              '#9c27b0',
+              '#673ab7',
             ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1,
           },
         ],
       }
-      
-
       return <Bar data={data} options={options} />
 }
   

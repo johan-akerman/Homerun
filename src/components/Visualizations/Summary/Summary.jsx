@@ -34,6 +34,7 @@ const Summary = props => {
     let tmpTotalFee = 0;
     let tmpTotalAskPrice = 0;
     let tmpTotalEndPrice = 0;
+
     console.log(tmpTotalSqmPrice);
     allFilteredApartments.map((item) => { //for each filter
         item.map((apartment) => { //for each apartment in each filter
@@ -44,13 +45,12 @@ const Summary = props => {
           tmpTotalEndPrice = tmpTotalEndPrice + apartment.endPrice;
         });
     });
-
     setTotalTransactions(tmpTotalTransactions);
     setAvgSqmPrice(Math.round(tmpTotalSqmPrice / tmpTotalTransactions));
     setAvgMonthlyFee(Math.round(tmpTotalFee / tmpTotalTransactions));
     setAvgAskPrice(Math.round(tmpTotalAskPrice / tmpTotalTransactions));
     setAvgEndPrice(Math.round(tmpTotalEndPrice / tmpTotalTransactions));
-    setAvgPriceDevelopment(Math.round((((tmpTotalEndPrice - tmpTotalAskPrice) / tmpTotalAskPrice) / tmpTotalTransactions) * 100));
+    setAvgPriceDevelopment(Math.round(((tmpTotalEndPrice - tmpTotalAskPrice) / tmpTotalAskPrice) * 100)); //fel
 }, [allFilteredApartments])
 
   return (
@@ -112,11 +112,9 @@ const Summary = props => {
             let tmpTotEndPrice = 0;
             let tmpTotMonthlyFee = 0;
    
-
             item.map((apartment) => { //for each apartment in each filter
               tmpTotSquareMeterPrice = tmpTotSquareMeterPrice + apartment.pricePerSquare;
               tmpTotMonthlyFee = tmpTotMonthlyFee + apartment.monthlyFee;
-
               tmpTotAskPrice = tmpTotAskPrice + apartment.askPrice;
               tmpTotEndPrice = tmpTotEndPrice + apartment.endPrice;
             });
@@ -138,7 +136,7 @@ const Summary = props => {
                 <TableCell align="left" className={styles.cell}>{Math.round(tmpTotSquareMeterPrice / item.length)}</TableCell>
                 <TableCell align="left" className={styles.cell}>{Math.round(tmpTotMonthlyFee / item.length)}</TableCell>
                 <TableCell align="left" className={styles.cell}>{Math.round(tmpTotEndPrice / item.length)}</TableCell>
-                <TableCell align="left" className={styles.cell}>{(Math.round((((tmpTotEndPrice - tmpTotAskPrice) / tmpTotAskPrice) / item.length) * 100))}</TableCell>
+                <TableCell align="left" className={styles.cell}>{(Math.round((((tmpTotEndPrice - tmpTotAskPrice) / tmpTotAskPrice) * 100)))}</TableCell>
             </TableRow>
             )
 
