@@ -37,7 +37,7 @@ export default function Grid(props) {
                     </Tooltip>
                 </IconButton>
 
-                <IconButton className={styles.expandMeBtn} edge="end" aria-label="help" onClick={handleOpen} >
+                <IconButton className={styles.expandMeBtn} edge="end" aria-label="help">
                     <Tooltip title={description} aria-label="help">
                         <HelpOutlineIcon />
                     </Tooltip>

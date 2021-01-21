@@ -24,11 +24,10 @@ const options = {
     else if (i === 4) return '#673ab7';
 };
 
-
-
 const SquareMeterPriceDevelopment = props => {
     const [allFilteredApartments, setAllFilteredApartments] = useState([]);
     const [avgSquareMeterPriceDevelopment, setAvgSquareMeterPriceDevelopment] = useState([]);
+    const [mainDict, setMainDict] = useState([]);
     const [theDataSet, setTheDataSet] = useState([]);
 
     //Gets data via props from App component. Sets it to allFilteredApartments.
@@ -37,16 +36,15 @@ const SquareMeterPriceDevelopment = props => {
     }, [props.data]);
 
     useEffect(() => {
+        let tmpDict = [] 
         allFilteredApartments.map((item) => {  //for each filter
             let totalApartmentsSoldPerMonth = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0} 
             let totalSqmPricePerMonth = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0} 
             let averageSqmPrice =  {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0} 
-
             item.map((i) => {  //for each apartment in the filter
                 let month = new Date(i.date).getMonth() + 1; //make a date object
-
                 if (totalApartmentsSoldPerMonth[month]) { //if the month exists.
-                    totalApartmentsSoldPerMonth[month] = totalApartmentsSoldPerMonth[month] + 1;
+                    totalApartmentsSoldPerMonth[month] = totalApartmentsSoldPerMonth[month] + 1; 
                     totalSqmPricePerMonth[month] = totalSqmPricePerMonth[month] + i.pricePerSquare;
                 } else {
                     totalApartmentsSoldPerMonth[month] = 1;
@@ -54,29 +52,30 @@ const SquareMeterPriceDevelopment = props => {
                 }
                 averageSqmPrice[month] = Math.round(totalSqmPricePerMonth[month] / totalApartmentsSoldPerMonth[month]);
             });
-            setAvgSquareMeterPriceDevelopment(averageSqmPrice);
+            tmpDict.push(averageSqmPrice);
         });
+        setMainDict(tmpDict);
+        console.log(mainDict);
     }, [allFilteredApartments])
 
 
     // Update dataset that is input to chart
     useEffect(() => {
     let myDataSets = []
-        allFilteredApartments.map((item, index) => { //for each filter
-            if (avgSquareMeterPriceDevelopment[index + 1]) {
+        mainDict.map((item, index) => { //for each filter
             let tmpObject = {
-                label: item[0].area,
-                data: Object.values(avgSquareMeterPriceDevelopment[index]),
+                label: `Filter #${index + 1}`,
+                data: Object.values(item),
                 fill: false,
                 backgroundColor: getColor(index),
                 borderColor: getColor(index),
             }
             myDataSets.push(tmpObject)
+            console.log(myDataSets)
         }
-        });
+        );
         setTheDataSet(myDataSets);
-        console.log(theDataSet)
-    }, [allFilteredApartments])
+    }, [mainDict])
     
     const data = {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] ,
