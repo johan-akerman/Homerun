@@ -10,9 +10,8 @@ import CloseIcon from '@material-ui/icons/Close';
 
 
 export default function Grid(props) {
-
     const [open, setOpen] = React.useState(false);
-  
+
     const handleOpen = () => {
       setOpen(true);
     };
@@ -59,7 +58,9 @@ export default function Grid(props) {
                         </Tooltip>
                     </IconButton>
                 </div>
-                {children}
+                <div className={styles.modalBody}> 
+                    {children}
+                </div>
           </div>
       </Modal>
   </>

@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 const FilterList = (props) => {
-  let deleteMe = (currentIndex) => {
+   let deleteMe = (currentIndex) => {
     props.handleDelete(currentIndex);
   };
 

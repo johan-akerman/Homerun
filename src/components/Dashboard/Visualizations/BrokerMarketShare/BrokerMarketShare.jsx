@@ -20,7 +20,6 @@ const BrokerMarketShare = props => {
 
     useEffect(() => {
         let dict = {}
-
         allFilteredApartments.map((item) => { //for all filtered apartments
             item.map((current) => { //go into each filter
                     if (dict[current.broker]) { //if current broker key already exists in dictionary
