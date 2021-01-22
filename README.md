@@ -7,7 +7,7 @@ Homerun is a data visualization tool that helps you make a "homerun" on your nex
 ## How to use it
 1. Add a filter of the apartments you are interested in
 2. Observe the data visualizations
-3. Repeat step 1 to compare different types of apartments against eachother.
+3. Add more filters if you would like to compare different types of apartments against each other.
 
 
 ## Screenshots
@@ -21,6 +21,6 @@ Homerun is a data visualization tool that helps you make a "homerun" on your nex
 	title="Desktop preview" width="400" /> 
   
   ## About the data
-  The data is scraped in python by my friend Hannes. He is currently working on a python script that will collect all the data from the sold apartments in Stockholm on hemnet.se. View his progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping. While this data is being collected I am using "fake" data and this is the data you can see in the screenshots above.
+  The data is scraped in python by my friend Hannes. He is currently working on a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from hemnet.se. The data is then being transformed into a json file. View his progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping. While this script is being completed and the data is being collected, I am using fake data and this is the data that you can see in the screenshots above.
   
   
