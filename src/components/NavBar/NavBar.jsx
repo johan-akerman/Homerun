@@ -28,10 +28,7 @@ export default function DenseAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-   
         <Toolbar className={styles.navbar}>
-      
-     
           <HomeIcon className={styles.logo}/>
           <Typography variant="h6" className={classes.title}>
               Homerun
