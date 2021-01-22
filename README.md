@@ -1,4 +1,26 @@
 # Homerun
-Interested in making a homerun when buying your next home? Or perhaps when selling your current home? Cool, we got you covered. By scraping the web we have gathered tons of data about the Stockholm real estate market. With the help of this data, we have made it easy for you to compare different areas within Stockholm and see what different types of apartment have been valued at in the past. All with the purpose of making it as easy as possible for you to make the best deal when buying a new home or selling your current one. To put it simple, we help you make a homerun! 
+Homerun is a data visualization tool that helps you make a "homerun" on your next apartment purchase by comparing different types of apartments. The tool is based on data scraped from Hemnet.se during 2020. The tool is built in React and Material UI and the data is scraped with Python.
 
-PS, this project is currently under development. 
+<img src="/src/images/ReadMe/preview.gif" alt="gif"
+	title="Gif" width="800" /> 
+
+## How to use it
+1. Add a filter of the apartments you are interested in
+2. Observe the data visualizations
+3. Repeat step 1 to compare different types of apartments against eachother.
+
+
+## Screenshots
+<img src="/src/images/ReadMe/1.png" alt="Logo"
+	title="Desktop preview" width="400" /> 
+<img src="/src/images/ReadMe/2.png" alt="Logo"
+	title="Desktop preview" width="400" /> 
+  <img src="/src/images/ReadMe/3.png" alt="Logo"
+	title="Desktop preview" width="400" /> 
+  <img src="/src/images/ReadMe/4.png" alt="Logo"
+	title="Desktop preview" width="400" /> 
+  
+  ## About the data
+  The data is scraped in python by my friend Hannes. He is currently working on a python script that will collect all the data from the sold apartments in Stockholm on hemnet.se. View his progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping. While this data is being collected I am using "fake" data and this is the data you can see in the screenshots above.
+  
+  
