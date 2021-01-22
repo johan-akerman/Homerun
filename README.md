@@ -1,5 +1,5 @@
 # Homerun
-Homerun is a data visualization tool that helps you make a "homerun" on your next apartment purchase by comparing different types of apartments. The tool is based on data scraped from Hemnet.se during 2020. The tool is built in React and Material UI and the data is scraped with Python.
+Homerun is a data visualization tool that helps you make a "homerun" on your next apartment purchase by comparing different types of apartments. The tool is based on data scraped from Hemnet.se during 2020. The frontend is built in React and Material UI. The data is scraped with Python.
 
 <img src="/src/images/ReadMe/preview.gif" alt="gif"
 	title="Gif" width="800" /> 
