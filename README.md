@@ -3,6 +3,7 @@ Homerun is a data visualization tool that helps you make a "homerun" on your nex
 
 <img src="/src/images/ReadMe/preview.gif" alt="gif"
 	title="Gif" width="800" /> 
+Each added "filter" will get it's own color (see sidebar on the left). The data from each filter is visualized with a line in each chart in that color. 
 
 ## How to use it
 1. Add a filter of the apartments you are interested in
