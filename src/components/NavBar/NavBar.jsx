@@ -36,9 +36,7 @@ export default function DenseAppBar() {
           <Typography variant="h6" className={classes.title}>
               Homerun
           </Typography>
-          <Button color="inherit">About</Button>
-          <Button color="inherit">How it works</Button>
-          <Button color="inherit">Feedback</Button>
+          <Button href="https://forms.gle/ML7Vnwuq2xRw7Q2DA" target="_blank" color="inherit">Feedback</Button>
         </Toolbar>
       </AppBar>
     </div>

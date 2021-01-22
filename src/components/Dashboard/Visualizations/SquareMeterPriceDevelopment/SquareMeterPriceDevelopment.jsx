@@ -15,13 +15,21 @@ const options = {
       ],
     },
   }
+
+  let getBackgroundColor = (i) => {
+    if (i === 0) return '#00B400';
+    else if (i === 1) return '#3E33FF';
+    else if (i === 2) return '#FF4C00';
+    else if (i === 3) return '#FF075C';
+    else if (i === 4) return '#00AEFF';
+};
   
-  let getColor = (i) => {
-    if (i === 0) return '#8bc34a';
-    else if (i === 1) return '#03a9f4';
-    else if (i === 2) return '#ff9800';
-    else if (i === 3) return '#9c27b0';
-    else if (i === 4) return '#673ab7';
+  let getBorderColor = (i) => {
+    if (i === 0) return '#B8F3D2';
+    else if (i === 1) return '#D8DBFF';
+    else if (i === 2) return '#FFE3CC';
+    else if (i === 3) return '#FFD2E2';
+    else if (i === 4) return '#BAF1FF';
 };
 
 const SquareMeterPriceDevelopment = props => {
@@ -67,8 +75,8 @@ const SquareMeterPriceDevelopment = props => {
                 label: `Filter #${index + 1}`,
                 data: Object.values(item),
                 fill: false,
-                backgroundColor: getColor(index),
-                borderColor: getColor(index),
+                backgroundColor: getBackgroundColor(index),
+                borderColor: getBorderColor(index),
             }
             myDataSets.push(tmpObject)
             console.log(myDataSets)

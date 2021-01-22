@@ -5,6 +5,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
+import one from "../../../images/1.svg";
+import two from "../../../images/2.svg";
+import three from "../../../images/3.svg";
+import four from "../../../images/4.svg";
+import five from "../../../images/5.svg";
+
+
+
 
 const FilterList = (props) => {
    let deleteMe = (currentIndex) => {
@@ -14,12 +22,20 @@ const FilterList = (props) => {
   return (
     <List>
       {props.filters.map((data, i) => {
-        let getColor = (i) => {
-          if (i === 0) return '#8bc34a';
-          else if (i === 1) return '#03a9f4';
-          else if (i === 2) return '#ff9800';
-          else if (i === 3) return '#9c27b0';
-          else if (i === 4) return '#673ab7';
+        // let getColor = (i) => {
+        //   if (i === 0) return '#8bc34a';
+        //   else if (i === 1) return '#03a9f4';
+        //   else if (i === 2) return '#ff9800';
+        //   else if (i === 3) return '#9c27b0';
+        //   else if (i === 4) return '#673ab7';
+        // };
+
+        let getIcon = (i) => {
+          if (i === 0) return one;
+          else if (i === 1) return two;
+          else if (i === 2) return three;
+          else if (i === 3) return four;
+          else if (i === 4) return five;
         };
 
         let generateString = () => {
@@ -33,7 +49,8 @@ const FilterList = (props) => {
         
         return (
           <ListItem key={i}>
-            <div
+            <img src={getIcon(i)} style={{marginRight: 14}}/>
+            {/* <div
               style={{
                 marginRight: 14,
                 borderRadius: 100,
@@ -41,7 +58,7 @@ const FilterList = (props) => {
                 height: 14,
                 backgroundColor: getColor(i),
               }}
-            />
+            /> */}
             <ListItemText primary={data.area} secondary={generateString()} />
             <ListItemSecondaryAction>
               <IconButton

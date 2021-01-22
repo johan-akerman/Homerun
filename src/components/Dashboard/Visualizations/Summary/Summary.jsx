@@ -8,6 +8,12 @@ import Typography from '@material-ui/core/Typography';
 import CountUp from 'react-countup';
 import styles from "./Summary.module.css"
 
+import one from "../../../../images/1.svg"
+import two from "../../../../images/2.svg";
+import three from "../../../../images/3.svg";
+import four from "../../../../images/4.svg";
+import five from "../../../../images/5.svg";
+
 import TableRow from '@material-ui/core/TableRow';
 
 const Summary = props => {
@@ -118,18 +124,18 @@ const Summary = props => {
               tmpTotEndPrice = tmpTotEndPrice + apartment.endPrice;
             });
 
-            let getColor = (i) => {
-              if (i === 0) return '#8bc34a';
-              else if (i === 1) return '#03a9f4';
-              else if (i === 2) return '#ff9800';
-              else if (i === 3) return '#9c27b0';
-              else if (i === 4) return '#673ab7';
+            let getIcon = (i) => {
+              if (i === 0) return one;
+              else if (i === 1) return two;
+              else if (i === 2) return three;
+              else if (i === 3) return four;
+              else if (i === 4) return five;
             };
             
             return (
               <TableRow key={`Table Row${item.date} | ${index}`}>
                 <TableCell component="th" scope="row" className={styles.cell}>
-                  <div style={{borderRadius: 100, width: 14, height: 14, backgroundColor: getColor(index)}}/> 
+                  <img src={getIcon(index)} style={{marginRight: 14, height: 20}}/>
                 </TableCell>
                 <TableCell align="left" className={styles.cell}>{item.length}</TableCell>
                 <TableCell align="left" className={styles.cell}>{Math.round(tmpTotSquareMeterPrice / item.length)}</TableCell>

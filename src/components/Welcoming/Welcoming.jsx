@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Welcoming.module.css";
-import illustration from "../../houseIllustration.svg";
+import illustration from "../../images/houseIllustration.svg";
 import Typography from '@material-ui/core/Typography';
 
 export default function Welcoming(props) {

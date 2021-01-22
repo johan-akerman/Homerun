@@ -39,11 +39,11 @@ const BrokerMarketShare = props => {
           {
             data: Object.values(brokerMap),
             backgroundColor: [
-                '#8bc34a',
-                '#03a9f4',
-                '#ff9800',
-                '#9c27b0',
-                '#673ab7',
+                '#B8F3D2',
+                '#D8DBFF',
+                '#FFE3CC',
+                '#FFD2E2',
+                '#BAF1FF',
             ],
             borderWidth: 0,
           },
