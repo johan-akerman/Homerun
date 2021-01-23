@@ -1,17 +1,4 @@
 [
-{"area":"Vasastan","broker":"Fastighetsbyrån","address":"Tavastgatan 13","endPrice":4400000,"askPrice":3750000,"pricePerSquare":104762,"rooms":2.0,"size":42.0,"monthlyFee":2826,"date":"2020-12-17","postnumber":"11820"},
-{"area":"Vasastan","broker":"Lagerlöfs","address":"Kronobergsgatan 18","endPrice":5850000,"askPrice":4995000,"pricePerSquare":79054,"rooms":2.5,"size":74.0,"monthlyFee":3332,"date":"2020-11-17","postnumber":"11238"},
-{"area":"Vasastan","broker":"Husman Hagberg","address":"Fleminggatan 60A, 1tr","endPrice":6550000,"askPrice":6750000,"pricePerSquare":83974,"rooms":3.0,"size":78.0,"monthlyFee":5070,"date":"2020-11-17","postnumber":"11245"},
-{"area":"Vasastan","broker":"Lagerlöfs","address":"Melodislingan 46, vån5","endPrice":8900000,"askPrice":8795000,"pricePerSquare":111250,"rooms":3.0,"size":80.0,"monthlyFee":5874,"date":"2020-10-17","postnumber":"11551"},
-{"area":"Vasastan","broker":"Folkhem","address":"Västmannagatan 71B","endPrice":9125000,"askPrice":8495000,"pricePerSquare":108631,"rooms":3.0,"size":84.0,"monthlyFee":2888,"date":"2020-9-17","postnumber":"11326"},
-{"area":"Vasastan","broker":"Husman Hagberg","address":"Furusundsgatan 11, 4tr","endPrice":3800000,"askPrice":3250000,"pricePerSquare":111765,"rooms":2.0,"size":34.0,"monthlyFee":2094,"date":"2020-8-17","postnumber":"11537"},
-{"area":"Vasastan","broker":"Husman Hagberg","address":"Frejgatan 17, 4tr","endPrice":7000000,"askPrice":5995000,"pricePerSquare":100000,"rooms":3.0,"size":70.0,"monthlyFee":3558,"date":"2020-8-17","postnumber":"11349"},
-{"area":"Vasastan","broker":"Folkhem","address":"Sandhamnsgatan 30, 2tr med uteplats","endPrice":4050000,"askPrice":3850000,"pricePerSquare":71053,"rooms":2.0,"size":57.0,"monthlyFee":3361,"date":"2020-11-17","postnumber":"11540"},
-{"area":"Vasastan","broker":"Fastighetsbyrån","address":"Sanktpaulsgatan 28A","endPrice":4900000,"askPrice":3995000,"pricePerSquare":111364,"rooms":2.0,"size":44.0,"monthlyFee":2528,"date":"2020-6-17","postnumber":"11848"},
-{"area":"Vasastan","broker":"Lagerlöfs","address":"Fatburstrappan 12","endPrice":8150000,"askPrice":7650000,"pricePerSquare":77990,"rooms":5.0,"size":104.5,"monthlyFee":6297,"date":"2020-6-17","postnumber":"11826"},
-{"area":"Vasastan","broker":"Husman Hagberg","address":"Armfeltsgatan 9, 3tr","endPrice":7300000,"askPrice":6300000,"pricePerSquare":102817,"rooms":3.0,"size":71.0,"monthlyFee":3224,"date":"2020-4-17","postnumber":"11534"},
-
-
 {"area":"Östermalm","broker":"Lagerlöfs","address":"Långholmsgatan 13, 5tr","endPrice":3250000,"askPrice":3500000,"pricePerSquare":72222,"rooms":1.0,"size":45.0,"monthlyFee":2627,"date":"2020-12-17","postnumber":"11733"},
 {"area":"Östermalm","broker":"Folkhem","address":"Vanadisvägen 4M, 1tr","endPrice":5300000,"askPrice":4395000,"pricePerSquare":96364,"rooms":2.0,"size":55.0,"monthlyFee":2275,"date":"2020-12-17","postnumber":"11346"},
 {"area":"Östermalm","broker":"Fastighetsbyrån","address":"Turenermansgränd 6, 3tr","endPrice":3600000,"askPrice":3495000,"pricePerSquare":96000,"rooms":2.0,"size":37.5,"monthlyFee":884,"date":"2020-11-17","postnumber":"11237"},

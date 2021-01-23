@@ -80,7 +80,6 @@ const Form = (props) => {
           <MenuItem value={'Östermalm'}>Östermalm</MenuItem>
           <MenuItem value={'Södermalm'}>Södermalm</MenuItem>
           <MenuItem value={'Kungsholmen'}>Kungsholmen</MenuItem>
-          <MenuItem value={'Vasastan'}>Vasastan</MenuItem>
         </Select>
       </FormControl>
 

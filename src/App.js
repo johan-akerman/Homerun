@@ -6,6 +6,7 @@ import Form from "./components/Form/Form";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Welcoming from "./components/Welcoming/Welcoming";
+import MobileScreen from "./components/MobileScreen/MobileScreen";
 
 const url = "/apartments.json";
 const App = () => {
@@ -97,22 +98,27 @@ const App = () => {
   };
 
   return (
-    <React.Fragment>
-      <NavBar />
-      <div className={styles.container}>
-        <Sidebar
-          filters={filters}
-          deleteFunction={handleDelete}
-          clickFunction={handleAdd}
-        />
+    <>
+      <div className={styles.parentContainer}>
+        <NavBar />
+        <div className={styles.container}>
+          <Sidebar
+            filters={filters}
+            deleteFunction={handleDelete}
+            clickFunction={handleAdd}
+          />
 
-        {checkIfNoFilters()}
+          {checkIfNoFilters()}
+        </div>
+
+        <Popup title={"Add area to search"} openPopup={openPopup}>
+          <Form filters={filters} handleFormSubmit={handleFormSubmit} />
+        </Popup>
       </div>
-
-      <Popup title={"Add area to search"} openPopup={openPopup}>
-        <Form filters={filters} handleFormSubmit={handleFormSubmit} />
-      </Popup>
-    </React.Fragment>
+      <div className={styles.mobileScreenContainer}>
+        <MobileScreen />
+      </div>
+    </>
   );
 };
 

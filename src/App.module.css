@@ -8,44 +8,24 @@ body {
   margin: 0;
 }
 
+.parentContainer {
+  display: block;
+}
+
+.mobileScreenContainer {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .parentContainer {
+    display: none;
+  }
+
+  .mobileScreenContainer {
+    display: block;
+  }
+}
+
 .container {
   height: 92vh;
-}
-
-.button {
-  background-color: #11a384 !important;
-}
-
-.buttonContainer {
-  position: absolute;
-  bottom: 50px;
-  width: 100%;
-  text-align: center;
-}
-
-.sideBar {
-  background-color: white;
-  width: 25vw;
-  display: inline-block;
-  height: 100%;
-  overflow: auto;
-}
-
-.sideBarContent {
-  padding: 8px 0px;
-  height: 85%;
-  position: relative;
-}
-
-.mainContainer {
-  width: 75vw !important;
-  display: inline-block;
-  background-color: #f7f8f9 !important;
-  overflow: auto;
-  vertical-align: top;
-  height: 100%;
-}
-
-.mainContainerContent {
-  padding: 16px;
 }
