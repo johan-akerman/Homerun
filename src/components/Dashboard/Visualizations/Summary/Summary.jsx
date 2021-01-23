@@ -135,7 +135,7 @@ const Summary = props => {
             return (
               <TableRow key={`Table Row${item.date} | ${index}`}>
                 <TableCell component="th" scope="row" className={styles.cell}>
-                  <img src={getIcon(index)} style={{marginRight: 14, height: 20}}/>
+                  <img src={getIcon(index)} style={{height: 20, paddingTop: 5}}/>
                 </TableCell>
                 <TableCell align="left" className={styles.cell}>{item.length}</TableCell>
                 <TableCell align="left" className={styles.cell}>{Math.round(tmpTotSquareMeterPrice / item.length)}</TableCell>

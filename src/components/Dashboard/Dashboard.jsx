@@ -17,7 +17,7 @@ export default function Dashboard(props) {
                 <Grid item xs={12}>
                     <Card
                     title="Summary"
-                    description="Description about this card goes here."
+                    description="Shows a summary of all of the average data from all of the apartments in each filter. "
                     >
                     <Summary data={data} />
                     </Card>
@@ -26,7 +26,7 @@ export default function Dashboard(props) {
                 <Grid item xs={6}>
                     <Card
                     title="Number of sales"
-                    description="Description about this card goes here."
+                    description="Shows the total amount of sales each month for each filter."
                     >
                     <NumberOfSales data={data} />
                     </Card>
@@ -35,7 +35,7 @@ export default function Dashboard(props) {
                 <Grid item xs={6}>
                     <Card
                     title="Squaremeter price development"
-                    description="Description about this card goes here."
+                    description="Shows how the average price / sqm has changed during the year for each filter."
                     >
                     <SquareMeterPriceDevelopment data={data} />
                     </Card>
@@ -44,7 +44,7 @@ export default function Dashboard(props) {
                 <Grid item xs={4}>
                     <Card
                     title="Broker market share"
-                    description="Description about this card goes here."
+                    description="The chart shows how many sales each broker had in the last year."
                     >
                     <BrokerMarketShare data={data} />
                     </Card>
@@ -53,7 +53,7 @@ export default function Dashboard(props) {
                 <Grid item xs={8}>
                     <Card
                     title="Brokers average price development in %"
-                    description="Description about this card goes here."
+                    description="Shows the average (endprice - askprice) / askprice for each broker. I.e how the end price differs from the askprice in %."
                     >
                     <BrokersAveragePriceDevelopment data={data} />
                     </Card>

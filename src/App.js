@@ -36,6 +36,10 @@ const App = () => {
     }
   };
 
+  const handleClose = () => {
+    setOpenPopup(false);
+  };
+
   //Submits form.
   const handleFormSubmit = (data) => {
     const tmpFilters = [...filters];
@@ -111,7 +115,11 @@ const App = () => {
           {checkIfNoFilters()}
         </div>
 
-        <Popup title={"Add area to search"} openPopup={openPopup}>
+        <Popup
+          title={"Add filter to search"}
+          openPopup={openPopup}
+          handleClose={handleClose}
+        >
           <Form filters={filters} handleFormSubmit={handleFormSubmit} />
         </Popup>
       </div>

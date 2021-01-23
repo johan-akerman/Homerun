@@ -4,11 +4,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 export default function Popup(props) {
-  let { title, children, openPopup } = props;
-
-  const handleClose = () => {
-    openPopup = false;
-  };
+  let { title, children, openPopup, handleClose} = props;
 
   return (
     <Dialog
