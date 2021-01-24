@@ -6,10 +6,6 @@ const options = {
     legend: {
         display: false
     }, scales: {
-    xAxes: [{
-        display: false,
-    }
-    ],
       yAxes: [
         {
           ticks: {

@@ -18,7 +18,7 @@ const options = {
       xAxes: [
         {
           stacked: true,
-          display: false,
+          
         },
       ],
     },
