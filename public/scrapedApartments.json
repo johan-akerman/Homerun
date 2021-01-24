@@ -47,99 +47,95 @@
     {"area":"Östermalm","broker":"Properties & Partners Stockholm", "askPrice":7500000, "endPrice":7500000, "pricePerSquare":119048,"rooms":2,"size":63,"monthlyFee":2237,"date":"2020-1-01"},
     {"area":"Östermalm","broker":"Lagerlings", "askPrice":14500000, "endPrice":14900000, "pricePerSquare":129565,"rooms":3.5,"size":115,"monthlyFee":2497,"date":"2020-1-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-1"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-1"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-01"},
+    {"area":"Södermalm","broker":"Bjurfors", "askPrice":4250000, "endPrice":4250000, "pricePerSquare":94444,"rooms":2,"size":45,"monthlyFee":2182,"date":"2020-12-1"},
+    {"area":"Södermalm","broker":"Notar", "askPrice":4200000, "endPrice":4200000, "pricePerSquare":77778,"rooms":2,"size":54,"monthlyFee":2287,"date":"2020-12-1"},
+    {"area":"Södermalm","broker":"Mäklarhuset", "askPrice":3495000, "endPrice":3970000, "pricePerSquare":110278,"rooms":1,"size":36,"monthlyFee":2211,"date":"2020-12-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
+    {"area":"Södermalm","broker":"Södermäklarna", "askPrice":9000000, "endPrice":10750000, "pricePerSquare":102381,"rooms":4.5,"size":105,"monthlyFee":1887,"date":"2020-11-01"},
+    {"area":"Södermalm","broker":"BOSTHML", "askPrice":2495000, "endPrice":2700000, "pricePerSquare":87097,"rooms":1,"size":31,"monthlyFee":1746,"date":"2020-11-01"},
+    {"area":"Södermalm","broker":"Historiska Hem", "askPrice":3295000, "endPrice":3900000, "pricePerSquare":98734,"rooms":2,"size":40,"monthlyFee":2517,"date":"2020-11-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
+    {"area":"Södermalm","broker":"Historiska Hem", "askPrice":4350000, "endPrice":5590000, "pricePerSquare":114082,"rooms":2,"size":49,"monthlyFee":2948,"date":"2020-10-01"},
+    {"area":"Södermalm","broker":"Notar", "askPrice":3595000, "endPrice":4250000, "pricePerSquare":92391,"rooms":1.5,"size":46,"monthlyFee":2810,"date":"2020-10-01"},
+    {"area":"Södermalm","broker":"Södermäklarna", "askPrice":3060000, "endPrice":3060000, "pricePerSquare":95625,"rooms":1,"size":32,"monthlyFee":1653,"date":"2020-10-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
+    {"area":"Södermalm","broker":"Notar", "askPrice":3750000, "endPrice":4300000, "pricePerSquare":91489,"rooms":2,"size":47,"monthlyFee":2195,"date":"2020-9-01"},
+    {"area":"Södermalm","broker":"HusmanHagberg", "askPrice":6975000, "endPrice":7625000, "pricePerSquare":84722,"rooms":4,"size":90,"monthlyFee":3078,"date":"2020-9-01"},
+    {"area":"Södermalm","broker":"HusmanHagberg", "askPrice":5350000, "endPrice":5800000, "pricePerSquare":92063,"rooms":3,"size":63,"monthlyFee":3444,"date":"2020-9-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
+    {"area":"Södermalm","broker":"Svensk Fastighetsförmedling", "askPrice":2995000, "endPrice":3325000, "pricePerSquare":79167,"rooms":2,"size":42,"monthlyFee":2146,"date":"2020-8-01"},
+    {"area":"Södermalm","broker":"Alicia Edelman Fastighetsmäkleri", "askPrice":4250000, "endPrice":5410000, "pricePerSquare":104038,"rooms":3,"size":52,"monthlyFee":2453,"date":"2020-8-01"},
+    {"area":"Södermalm","broker":"Bjurfors", "askPrice":7500000, "endPrice": 7350000, "pricePerSquare":89634,"rooms":4,"size":82,"monthlyFee":4000,"date":"2020-8-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
+    {"area":"Södermalm","broker":"Bjurfors", "askPrice":9750000, "endPrice":10100000, "pricePerSquare":85593,"rooms":5,"size":118,"monthlyFee":4777,"date":"2020-7-01"},
+    {"area":"Södermalm","broker":"Historiska Hem", "askPrice":2750000, "endPrice":3430000, "pricePerSquare":110645,"rooms":1,"size":31,"monthlyFee":1889,"date":"2020-7-01"},
+    {"area":"Södermalm","broker":"Fastighetsbyrån", "askPrice":7150000, "endPrice":7150000, "pricePerSquare":89375,"rooms":3,"size":80,"monthlyFee":4591,"date":"2020-7-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
+    {"area":"Södermalm","broker":"SkandiaMäklarna", "askPrice":2390000, "endPrice":2720000, "pricePerSquare":108800,"rooms":1,"size":25,"monthlyFee":1455,"date":"2020-6-01"},
+    {"area":"Södermalm","broker":"HusmanHagberg", "askPrice":4975000, "endPrice":4950000, "pricePerSquare":61111,"rooms":3,"size":81,"monthlyFee":3843,"date":"2020-6-01"},
+    {"area":"Södermalm","broker":"Behrer & Partners", "askPrice":5795000, "endPrice":5900000, "pricePerSquare":86765,"rooms":3,"size":68,"monthlyFee":3018,"date":"2020-6-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
+    {"area":"Södermalm","broker":"Historiska Hem", "askPrice":5395000, "endPrice":6230000, "pricePerSquare":95846,"rooms":2,"size":65,"monthlyFee":2134,"date":"2020-5-01"},
+    {"area":"Södermalm","broker":"BOSTHLM", "askPrice":3975000, "endPrice":4650000, "pricePerSquare":96875,"rooms":2,"size":48,"monthlyFee":2757,"date":"2020-5-01"},
+    {"area":"Södermalm","broker":"SkandiaMäklarna", "askPrice":8750000, "endPrice":9900000, "pricePerSquare":90826,"rooms":4,"size":109,"monthlyFee":5290,"date":"2020-5-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
+    {"area":"Södermalm","broker":"BOSTHLM", "askPrice":3750000, "endPrice":3950000, "pricePerSquare":87778,"rooms":2,"size":45,"monthlyFee":2017,"date":"2020-4-01"},
+    {"area":"Södermalm","broker":"Mäklarhuset", "askPrice":8975000, "endPrice":10550000, "pricePerSquare":111053,"rooms":4,"size":95,"monthlyFee":2165,"date":"2020-4-01"},
+    {"area":"Södermalm","broker":"Svensk Fastighetsförmedling", "askPrice":6750000, "endPrice":6750000, "pricePerSquare":68878,"rooms":4,"size":98,"monthlyFee":4863,"date":"2020-4-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
+    {"area":"Södermalm","broker":"Historiska Hem", "askPrice":4200000, "endPrice":4000000, "pricePerSquare":68966,"rooms":2,"size":58,"monthlyFee":2349,"date":"2020-3-01"},
+    {"area":"Södermalm","broker":"Bjurfors", "askPrice":2950000, "endPrice":3570000, "pricePerSquare":102000,"rooms":1,"size":35,"monthlyFee":1365,"date":"2020-3-01"},
+    {"area":"Södermalm","broker":"Fastighetsbyrån", "askPrice":5200000, "endPrice":5200000, "pricePerSquare":68421,"rooms":3,"size":76,"monthlyFee":4520,"date":"2020-3-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
+    {"area":"Södermalm","broker":"Notar", "askPrice":2395000, "endPrice":2675000, "pricePerSquare":95536,"rooms":1,"size":28,"monthlyFee":1605,"date":"2020-2-01"},
+    {"area":"Södermalm","broker":"Bjurfors", "askPrice":4995000, "endPrice":5600000, "pricePerSquare":84848,"rooms":3,"size":66,"monthlyFee":3064,"date":"2020-2-01"},
+    {"area":"Södermalm","broker":"Eklund Stockholm New York", "askPrice":3650000, "endPrice":4500000, "pricePerSquare":107143,"rooms":2,"size":42,"monthlyFee":912,"date":"2020-2-01"},
 
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"},
-    {"area":"Södermalm","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-1"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-1"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"},
 
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-1"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-1"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
+
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
+
     {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-2-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-3-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-4-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-5-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-6-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-7-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-8-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-9-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-10-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-11-01"},
-
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"},
-    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-12-01"}
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-01"},
+    {"area":"Kungsholmen","broker":"XXXX", "askPrice":1111, "endPrice":1111, "pricePerSquare":1111,"rooms":1111,"size":1111,"monthlyFee":1111,"date":"2020-1-01"}
 ]
