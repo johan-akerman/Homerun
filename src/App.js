@@ -8,7 +8,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Welcoming from "./components/Welcoming/Welcoming";
 import MobileScreen from "./components/MobileScreen/MobileScreen";
 
-const url = "/apartments.json";
+const url = "/scrapedApartments.json";
 const App = () => {
   const [openPopup, setOpenPopup] = useState(false);
   const [filters, setFilters] = useState([]);
