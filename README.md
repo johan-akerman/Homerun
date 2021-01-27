@@ -24,7 +24,7 @@ I built the frontend in React JS, Material UI and Chart JS. Hannes scraped the d
 
 ## How to use it
 1. Try out the tool here: https://johan-akerman.github.io/Homerun
-1. In the bottom left corner you can add filters of the apartments that you are interested in. 
+1. In the bottom left corner you can add filters for the apartments that you are interested in. 
 3. Add more filters if you would like to compare different types of apartments against each other.
 4. Observe the data visualizations.
 
