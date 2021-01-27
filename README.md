@@ -1,7 +1,6 @@
-# Homerun
-A data visualization tool that helps you compare apartments and make a data- driven "homerun" on your next purchase 🏠<br /> 
+# Homerun 🏠
+A data visualization tool that helps you compare apartments and make a data-driven "homerun" on your next purchase.<br /> 
 Try Homerun here: https://johan-akerman.github.io/Homerun
-<br />
 <br />
 
 <img src="/src/images/ReadMe/preview.gif" alt="gif"
