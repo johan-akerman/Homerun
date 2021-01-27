@@ -33,4 +33,5 @@ I built the frontend in React JS, Material UI and Chart JS. Hannes scraped the d
 Hannes is currenlty writing a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from Hemnet. While this script is being completed and transformed into json format, I collected some random apartments from hemnet on my own to get some data to display. I randomly choose 3 apartments sold in each month of 2020 in Kungsholmen, Östermalm and Södermalm. In other words, 3 * 12 * 4 = 144 apartments. This is the data that is currently displayed in the tool. Imagine the result when the 50 000+ apartments sold in Stockholm during 2020 are being displayed 🤯
 
 Try out Homerun here: https://johan-akerman.github.io/Homerun
+<br />
 View Hannes progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping.  
