@@ -1,15 +1,14 @@
 # Homerun
-Homerun is a data visualization tool that helps you make a "homerun" on your next apartment purchase by comparing different types of apartments. The tool is based on data scraped from Hemnet.se during 2020. The frontend is built in React and Material UI. The data is scraped with Python.
+A data visualization tool that helps you compare apartments and make a data- driven "homerun" on your next purchase 🏠<br /> 
+Try Homerun here: https://johan-akerman.github.io/Homerun
+<br />
+<br />
 
 <img src="/src/images/ReadMe/preview.gif" alt="gif"
-	title="Gif" width="800" /> <br /><br/>
-Each added "filter" will get it's own color (see sidebar on the left). The data from each filter is visualized with a line in each chart in that color. 
+	title="Gif" width="600" /> <br /><br/>
 
-## How to use it
-1. Add a filter of the apartments you are interested in
-2. Observe the data visualizations
-3. Add more filters if you would like to compare different types of apartments against each other.
-
+## Story about the project
+When my older brother was going to buy his first apartment he used to get frusterated about how the prices increased tremendously once the bidding process started. It got me interested in what kind of apartment X SEK could get you in Stockholm and what factors you should take into consideration (such as time of the year, broker etc) when buying an apartment. I talked to my friend Hannes and we started discussing how we could apply programming to solve this problem. We came up with the idea to scrape the web for sold apartments (from hemnet.se) and let the user apply different filters to sort the data and then visualize the result in various charts. The result became Homerun 👇
 
 ## Screenshots
 <img src="/src/images/ReadMe/1.png" alt="Logo"
@@ -20,8 +19,18 @@ Each added "filter" will get it's own color (see sidebar on the left). The data 
 	title="Desktop preview" width="400" /> 
   <img src="/src/images/ReadMe/4.png" alt="Logo"
 	title="Desktop preview" width="400" /> 
-  
-  ## About the data
-  The data is scraped in python by my friend Hannes. He is currently working on a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from hemnet.se. The data is then being transformed into a json file. View his progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping. While this script is being completed and the data is being collected, I am using fake data and this is the data that you can see in the screenshots above.
-  
-  
+	
+## Technologies used
+I built the frontend in React JS, Material UI and Chart JS. Hannes scraped the data with Python. 
+
+## How to use it
+1. Try out the tool here: https://johan-akerman.github.io/Homerun
+1. In the bottom left corner you can add filters of the apartments that you are interested in. 
+3. Add more filters if you would like to compare different types of apartments against each other.
+4. Observe the data visualizations.
+
+## About the data
+Hannes is currenlty writing a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from Hemnet. While this script is being completed and transformed into json format, I collected some random apartments from hemnet on my own to get some data to display. I randomly choose 3 apartments sold in each month of 2020 in Kungsholmen, Östermalm and Södermalm. In other words, 3 * 12 * 4 = 144 apartments. This is the data that is currently displayed in the tool. Imagine the result when the 50 000+ apartments sold in Stockholm during 2020 are being displayed 🤯
+
+Try out Homerun here: https://johan-akerman.github.io/Homerun
+View Hannes progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping.  
