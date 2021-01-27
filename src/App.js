@@ -7,8 +7,9 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Welcoming from "./components/Welcoming/Welcoming";
 import MobileScreen from "./components/MobileScreen/MobileScreen";
+const json = require("../src/scrapedApartments.json");
+const url = "src/scrapedApartments.json";
 
-const url = "/scrapedApartments.json";
 const App = () => {
   const [openPopup, setOpenPopup] = useState(false);
   const [filters, setFilters] = useState([]);
@@ -17,13 +18,7 @@ const App = () => {
 
   //sets allApartments to all apartments from JSON file.
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(url);
-      const json = await response.json();
-      setAllApartments(json);
-      setFilteredApartments(json);
-    };
-    fetchData();
+    setAllApartments(json);
   }, []);
 
   const handleAdd = () => {
