@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Homerun/static/css/main.6f872685.chunk.css",
-    "main.js": "/Homerun/static/js/main.99223293.chunk.js",
-    "main.js.map": "/Homerun/static/js/main.99223293.chunk.js.map",
+    "main.css": "/Homerun/static/css/main.9dfb9303.chunk.css",
+    "main.js": "/Homerun/static/js/main.39c95f79.chunk.js",
+    "main.js.map": "/Homerun/static/js/main.39c95f79.chunk.js.map",
     "runtime-main.js": "/Homerun/static/js/runtime-main.0e347f93.js",
     "runtime-main.js.map": "/Homerun/static/js/runtime-main.0e347f93.js.map",
     "static/js/2.502e2035.chunk.js": "/Homerun/static/js/2.502e2035.chunk.js",
     "static/js/2.502e2035.chunk.js.map": "/Homerun/static/js/2.502e2035.chunk.js.map",
     "index.html": "/Homerun/index.html",
-    "static/css/main.6f872685.chunk.css.map": "/Homerun/static/css/main.6f872685.chunk.css.map",
+    "static/css/main.9dfb9303.chunk.css.map": "/Homerun/static/css/main.9dfb9303.chunk.css.map",
     "static/js/2.502e2035.chunk.js.LICENSE.txt": "/Homerun/static/js/2.502e2035.chunk.js.LICENSE.txt",
     "static/media/1.1ca6a2ab.svg": "/Homerun/static/media/1.1ca6a2ab.svg",
     "static/media/2.299c048e.svg": "/Homerun/static/media/2.299c048e.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.0e347f93.js",
     "static/js/2.502e2035.chunk.js",
-    "static/css/main.6f872685.chunk.css",
-    "static/js/main.99223293.chunk.js"
+    "static/css/main.9dfb9303.chunk.css",
+    "static/js/main.39c95f79.chunk.js"
   ]
 }
