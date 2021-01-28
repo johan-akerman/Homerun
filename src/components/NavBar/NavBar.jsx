@@ -7,9 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import styles from "./NavBar.module.css";
 import homeIcon from "../../images/homeIcon.svg";
 
-
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

@@ -8,11 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import CountUp from 'react-countup';
 import styles from "./Summary.module.css"
 
-import one from "../../../../images/1.svg"
-import two from "../../../../images/2.svg";
-import three from "../../../../images/3.svg";
-import four from "../../../../images/4.svg";
-import five from "../../../../images/5.svg";
+import one from "../../../../images/1.png"
+import two from "../../../../images/2.png";
+import three from "../../../../images/3.png";
+import four from "../../../../images/4.png";
+import five from "../../../../images/5.png";
 
 import TableRow from '@material-ui/core/TableRow';
 
