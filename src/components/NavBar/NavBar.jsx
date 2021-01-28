@@ -33,6 +33,7 @@ export default function DenseAppBar() {
           <Typography variant="h6" className={classes.title}>
               Homerun
           </Typography>
+          <Button href="https://github.com/johan-akerman/Homerun" target="_blank" color="inherit">View code on Github</Button>
           <Button href="https://forms.gle/ML7Vnwuq2xRw7Q2DA" target="_blank" color="inherit">Feedback</Button>
         </Toolbar>
       </AppBar>
