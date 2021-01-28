@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Homerun/static/css/main.9dfb9303.chunk.css",
-    "main.js": "/Homerun/static/js/main.39c95f79.chunk.js",
-    "main.js.map": "/Homerun/static/js/main.39c95f79.chunk.js.map",
+    "main.js": "/Homerun/static/js/main.2adedbff.chunk.js",
+    "main.js.map": "/Homerun/static/js/main.2adedbff.chunk.js.map",
     "runtime-main.js": "/Homerun/static/js/runtime-main.0e347f93.js",
     "runtime-main.js.map": "/Homerun/static/js/runtime-main.0e347f93.js.map",
     "static/js/2.502e2035.chunk.js": "/Homerun/static/js/2.502e2035.chunk.js",
@@ -10,11 +10,6 @@
     "index.html": "/Homerun/index.html",
     "static/css/main.9dfb9303.chunk.css.map": "/Homerun/static/css/main.9dfb9303.chunk.css.map",
     "static/js/2.502e2035.chunk.js.LICENSE.txt": "/Homerun/static/js/2.502e2035.chunk.js.LICENSE.txt",
-    "static/media/1.1ca6a2ab.svg": "/Homerun/static/media/1.1ca6a2ab.svg",
-    "static/media/2.299c048e.svg": "/Homerun/static/media/2.299c048e.svg",
-    "static/media/3.c696a103.svg": "/Homerun/static/media/3.c696a103.svg",
-    "static/media/4.6c715354.svg": "/Homerun/static/media/4.6c715354.svg",
-    "static/media/5.5ba1af23.svg": "/Homerun/static/media/5.5ba1af23.svg",
     "static/media/homeIcon.5ca7ea7a.svg": "/Homerun/static/media/homeIcon.5ca7ea7a.svg",
     "static/media/houseIllustration.5db0eaa3.svg": "/Homerun/static/media/houseIllustration.5db0eaa3.svg",
     "static/media/phoneIllustration.d559823b.svg": "/Homerun/static/media/phoneIllustration.d559823b.svg"
@@ -23,6 +18,6 @@
     "static/js/runtime-main.0e347f93.js",
     "static/js/2.502e2035.chunk.js",
     "static/css/main.9dfb9303.chunk.css",
-    "static/js/main.39c95f79.chunk.js"
+    "static/js/main.2adedbff.chunk.js"
   ]
 }
