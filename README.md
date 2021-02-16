@@ -14,26 +14,26 @@ When my older brother was going to buy his first apartment he used to get fruste
 
 ## How Homerun works
 
-<strong>Step 1:</strong> The user gets greeted by a homepage with some instructions.
+<strong>Step 1:</strong> The user gets greeted by a homepage with some instructions.<br>
 <br />
 <img src="/src/images/ReadMe/1.png" alt="Logo"
 	title="Desktop preview" width="500" />
 	<br />
 
-<strong>Step 2:</strong> The user can add filters for what kind of apartments they want to learn more about. Multiple filters could be added at the same time to compare different types of apartments. <br />
+<strong>Step 2:</strong> The user can add filters for what kind of apartments they want to learn more about. Multiple filters could be added at the same time to compare different types of apartments. <br /><br>
 <img src="/src/images/ReadMe/2.png" alt="Logo"
 	title="Desktop preview" width="500" />
 	<br />
 
 
 
-<strong>Step 3:</strong> After a filter is added, the data is being displayed in different charts.  <br />
+<strong>Step 3:</strong> After a filter is added, the data is being displayed in different charts.  <br /><br>
 <img src="/src/images/ReadMe/3.png" alt="Logo"
 	title="Desktop preview" width="400" />
 <img src="/src/images/ReadMe/4.png" alt="Logo"
 	title="Desktop preview" width="400" />
 
-<strong>Step 4:</strong> The user can choose to view a specific chart card in fullscreen for greater details.<br />
+<strong>Step 4:</strong> The user can choose to view a specific chart card in fullscreen for greater details.<br /><br>
 <img src="/src/images/ReadMe/6.png" alt="Logo"
 	title="Desktop preview" width="500" />
 
