@@ -1,6 +1,7 @@
 # Homerun 🏠
 A data visualization tool that helps you compare apartments and make a data-driven "homerun" on your next purchase.<br /> 
-Try Homerun here: https://johan-akerman.github.io/Homerun
+
+<strong>Try Homerun here:</strong> https://johan-akerman.github.io/Homerun
 <br />
 
 <img src="/src/images/ReadMe/preview.gif" alt="gif"
@@ -20,7 +21,7 @@ When my older brother was going to buy his first apartment he used to get fruste
 	title="Desktop preview" width="400" /> 
 	
 ## Technologies used
-I built the frontend in React JS, Material UI and Chart JS. Hannes scraped the data with Python. 
+I built the frontend in React JS, Material UI and Chart JS. My friend Hannes is scraping the data with Python. 
 
 ## How to use it
 1. Try out the tool here: https://johan-akerman.github.io/Homerun
@@ -29,8 +30,8 @@ I built the frontend in React JS, Material UI and Chart JS. Hannes scraped the d
 4. Observe the data visualizations.
 
 ## About the data
-Hannes is currenlty writing a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from Hemnet. While waiting for this script to being completed, I collected some random apartments from hemnet on my own to get some data to display. I randomly choose 3 apartments sold in each month of 2020 in Kungsholmen, Östermalm and Södermalm. In other words, 3 * 12 * 4 = 144 apartments. This is the data that is currently displayed in the tool. Imagine the result when the 50 000+ apartments sold in Stockholm during 2020 are being displayed 🤯
+Hannes is currenlty writing a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from Hemnet. While waiting for this script to being completed, I collected some random apartments from hemnet.se on my own to get some data to display. I randomly choose 3 apartments sold in each month of 2020 in Kungsholmen, Östermalm and Södermalm. In other words, 3 * 12 * 4 = 144 apartments. This is the data that is currently displayed in the tool. Imagine the result when the 50 000+ apartments sold in Stockholm during 2020 are being displayed 🤯
 
-Try out Homerun here: https://johan-akerman.github.io/Homerun
+<strong>Try out Homerun here:</strong> https://johan-akerman.github.io/Homerun
 <br />
-View Hannes progress here: https://github.com/hannesbrinklert/Hemnet-web-scraping.  
+<strong>View Hannes progress here:</strong>https://github.com/hannesbrinklert/Hemnet-web-scraping.  
