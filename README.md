@@ -27,7 +27,7 @@ When my older brother was going to buy his first apartment he used to get fruste
 
 
 
-<strong>Step 3:</strong> After a filter is added, the data is being displayed in different charts.  <br /><br>
+<strong>Step 3:</strong> After a filter is added, the data is being displayed in different charts. Each filter gets its own color (see panel on the left). The data for that specific filter is then displayed in the same color in the graphs. <br /><br>
 <img src="/src/images/ReadMe/3.png" alt="Logo"
 	title="Desktop preview" width="400" />
 <img src="/src/images/ReadMe/4.png" alt="Logo"
