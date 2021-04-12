@@ -47,4 +47,4 @@ My friend Hannes is currenlty writing a python script that collects all the data
 
 <strong>Try out Homerun here:</strong> https://johan-akerman.github.io/Homerun
 <br />
-<strong>View Hannes progress here:</strong>https://github.com/hannesbrinklert/Hemnet-web-scraping.
+<strong>View Hannes progress here:</strong> https://github.com/hannesbrinklert/Hemnet-web-scraping.
