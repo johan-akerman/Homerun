@@ -7,6 +7,10 @@ A data visualization tool that helps you compare apartments and make a data-driv
 
 <img src="/src/images/ReadMe/preview.gif" alt="gif"
 	title="Gif" width="600" /> <br /><br/>
+	
+## Technologies used
+
+I built the frontend in React JS, Material UI and Chart JS. My friend Hannes scraped the data with Python.
 
 ## Story about the project
 
@@ -36,15 +40,3 @@ When my older brother was going to buy his first apartment he used to get fruste
 <strong>Step 4:</strong> The user can choose to view a specific chart card in fullscreen for greater details.<br /><br>
 <img src="/src/images/ReadMe/6.png" alt="Logo"
 	title="Desktop preview" width="500" />
-
-## Technologies used
-
-I built the frontend in React JS, Material UI and Chart JS. My friend Hannes is scraping the data with Python.
-
-## About the data and project status
-
-My friend Hannes is currenlty writing a python script that collects all the data from the sold apartments during 2020 (in Stockholm) from Hemnet. While waiting for this script to being completed, I collected some random apartments from hemnet.se on my own to get some data to display. I randomly choose 3 apartments sold in each month of 2020 in Kungsholmen, Östermalm and Södermalm. In other words, 3 * 12 * 4 = 144 apartments. This is the data that is currently displayed in the tool. Imagine the result when the 50 000+ apartments sold in Stockholm during 2020 are being displayed. Or even better: if years of data would be collected to be able to see yearly patterns in the market 🤯
-
-<strong>Try out Homerun here:</strong> https://johan-akerman.github.io/Homerun
-<br />
-<strong>View Hannes progress here:</strong> https://github.com/hannesbrinklert/Hemnet-web-scraping.
